@@ -1,0 +1,1101 @@
+respondent_id,feature,functional,dysfunctional
+K000,Multilingual consent wizard,Neutral,Dislike
+K000,Doctor identity card,Like,Live with
+K000,Plain-language access log,Like,Neutral
+K000,Per-partner consent toggles,Like,Expect
+K000,Care Moments (WhatsApp/SMS),Like,Dislike
+K000,Grievance with case ID,Expect,Live with
+K000,Audio narration at kiosk,Like,Dislike
+K000,Download / share my records (ABHA),Neutral,Dislike
+K000,Trust status panel,Neutral,Neutral
+K000,Data deletion request,Expect,Neutral
+K001,Multilingual consent wizard,Expect,Live with
+K001,Doctor identity card,Neutral,Neutral
+K001,Plain-language access log,Expect,Live with
+K001,Per-partner consent toggles,Like,Dislike
+K001,Care Moments (WhatsApp/SMS),Neutral,Like
+K001,Grievance with case ID,Neutral,Like
+K001,Audio narration at kiosk,Like,Neutral
+K001,Download / share my records (ABHA),Like,Dislike
+K001,Trust status panel,Neutral,Neutral
+K001,Data deletion request,Like,Live with
+K002,Multilingual consent wizard,Expect,Dislike
+K002,Doctor identity card,Like,Dislike
+K002,Plain-language access log,Neutral,Neutral
+K002,Per-partner consent toggles,Like,Live with
+K002,Care Moments (WhatsApp/SMS),Like,Dislike
+K002,Grievance with case ID,Like,Dislike
+K002,Audio narration at kiosk,Like,Dislike
+K002,Download / share my records (ABHA),Like,Dislike
+K002,Trust status panel,Neutral,Neutral
+K002,Data deletion request,Neutral,Live with
+K003,Multilingual consent wizard,Expect,Dislike
+K003,Doctor identity card,Like,Dislike
+K003,Plain-language access log,Like,Live with
+K003,Per-partner consent toggles,Like,Dislike
+K003,Care Moments (WhatsApp/SMS),Expect,Live with
+K003,Grievance with case ID,Expect,Dislike
+K003,Audio narration at kiosk,Like,Live with
+K003,Download / share my records (ABHA),Like,Dislike
+K003,Trust status panel,Dislike,Live with
+K003,Data deletion request,Neutral,Neutral
+K004,Multilingual consent wizard,Neutral,Dislike
+K004,Doctor identity card,Like,Dislike
+K004,Plain-language access log,Like,Dislike
+K004,Per-partner consent toggles,Like,Dislike
+K004,Care Moments (WhatsApp/SMS),Like,Dislike
+K004,Grievance with case ID,Expect,Dislike
+K004,Audio narration at kiosk,Live with,Neutral
+K004,Download / share my records (ABHA),Dislike,Live with
+K004,Trust status panel,Neutral,Neutral
+K004,Data deletion request,Like,Neutral
+K005,Multilingual consent wizard,Neutral,Dislike
+K005,Doctor identity card,Like,Dislike
+K005,Plain-language access log,Like,Neutral
+K005,Per-partner consent toggles,Like,Neutral
+K005,Care Moments (WhatsApp/SMS),Neutral,Live with
+K005,Grievance with case ID,Expect,Neutral
+K005,Audio narration at kiosk,Like,Neutral
+K005,Download / share my records (ABHA),Like,Dislike
+K005,Trust status panel,Live with,Neutral
+K005,Data deletion request,Like,Live with
+K006,Multilingual consent wizard,Neutral,Dislike
+K006,Doctor identity card,Expect,Dislike
+K006,Plain-language access log,Like,Live with
+K006,Per-partner consent toggles,Like,Dislike
+K006,Care Moments (WhatsApp/SMS),Like,Like
+K006,Grievance with case ID,Like,Neutral
+K006,Audio narration at kiosk,Like,Neutral
+K006,Download / share my records (ABHA),Like,Live with
+K006,Trust status panel,Neutral,Live with
+K006,Data deletion request,Like,Neutral
+K007,Multilingual consent wizard,Expect,Dislike
+K007,Doctor identity card,Expect,Dislike
+K007,Plain-language access log,Like,Live with
+K007,Per-partner consent toggles,Like,Dislike
+K007,Care Moments (WhatsApp/SMS),Like,Dislike
+K007,Grievance with case ID,Expect,Dislike
+K007,Audio narration at kiosk,Like,Neutral
+K007,Download / share my records (ABHA),Like,Neutral
+K007,Trust status panel,Like,Neutral
+K007,Data deletion request,Like,Live with
+K008,Multilingual consent wizard,Like,Dislike
+K008,Doctor identity card,Like,Dislike
+K008,Plain-language access log,Neutral,Neutral
+K008,Per-partner consent toggles,Like,Dislike
+K008,Care Moments (WhatsApp/SMS),Like,Live with
+K008,Grievance with case ID,Expect,Dislike
+K008,Audio narration at kiosk,Like,Dislike
+K008,Download / share my records (ABHA),Expect,Dislike
+K008,Trust status panel,Expect,Neutral
+K008,Data deletion request,Like,Expect
+K009,Multilingual consent wizard,Like,Live with
+K009,Doctor identity card,Neutral,Live with
+K009,Plain-language access log,Expect,Neutral
+K009,Per-partner consent toggles,Like,Live with
+K009,Care Moments (WhatsApp/SMS),Like,Dislike
+K009,Grievance with case ID,Expect,Dislike
+K009,Audio narration at kiosk,Like,Neutral
+K009,Download / share my records (ABHA),Neutral,Live with
+K009,Trust status panel,Neutral,Neutral
+K009,Data deletion request,Like,Neutral
+K010,Multilingual consent wizard,Like,Dislike
+K010,Doctor identity card,Like,Live with
+K010,Plain-language access log,Like,Neutral
+K010,Per-partner consent toggles,Like,Dislike
+K010,Care Moments (WhatsApp/SMS),Like,Dislike
+K010,Grievance with case ID,Neutral,Live with
+K010,Audio narration at kiosk,Like,Dislike
+K010,Download / share my records (ABHA),Like,Dislike
+K010,Trust status panel,Neutral,Live with
+K010,Data deletion request,Like,Live with
+K011,Multilingual consent wizard,Expect,Neutral
+K011,Doctor identity card,Expect,Dislike
+K011,Plain-language access log,Like,Neutral
+K011,Per-partner consent toggles,Neutral,Dislike
+K011,Care Moments (WhatsApp/SMS),Neutral,Dislike
+K011,Grievance with case ID,Expect,Dislike
+K011,Audio narration at kiosk,Like,Neutral
+K011,Download / share my records (ABHA),Like,Neutral
+K011,Trust status panel,Neutral,Neutral
+K011,Data deletion request,Like,Neutral
+K012,Multilingual consent wizard,Live with,Neutral
+K012,Doctor identity card,Like,Dislike
+K012,Plain-language access log,Like,Neutral
+K012,Per-partner consent toggles,Expect,Like
+K012,Care Moments (WhatsApp/SMS),Like,Dislike
+K012,Grievance with case ID,Expect,Live with
+K012,Audio narration at kiosk,Like,Neutral
+K012,Download / share my records (ABHA),Neutral,Dislike
+K012,Trust status panel,Like,Neutral
+K012,Data deletion request,Like,Neutral
+K013,Multilingual consent wizard,Neutral,Dislike
+K013,Doctor identity card,Like,Dislike
+K013,Plain-language access log,Like,Neutral
+K013,Per-partner consent toggles,Like,Dislike
+K013,Care Moments (WhatsApp/SMS),Like,Dislike
+K013,Grievance with case ID,Like,Dislike
+K013,Audio narration at kiosk,Live with,Neutral
+K013,Download / share my records (ABHA),Like,Dislike
+K013,Trust status panel,Neutral,Live with
+K013,Data deletion request,Like,Neutral
+K014,Multilingual consent wizard,Neutral,Dislike
+K014,Doctor identity card,Live with,Neutral
+K014,Plain-language access log,Neutral,Neutral
+K014,Per-partner consent toggles,Like,Dislike
+K014,Care Moments (WhatsApp/SMS),Like,Dislike
+K014,Grievance with case ID,Expect,Dislike
+K014,Audio narration at kiosk,Neutral,Neutral
+K014,Download / share my records (ABHA),Expect,Like
+K014,Trust status panel,Dislike,Dislike
+K014,Data deletion request,Expect,Neutral
+K015,Multilingual consent wizard,Expect,Live with
+K015,Doctor identity card,Like,Expect
+K015,Plain-language access log,Like,Neutral
+K015,Per-partner consent toggles,Like,Dislike
+K015,Care Moments (WhatsApp/SMS),Like,Dislike
+K015,Grievance with case ID,Like,Neutral
+K015,Audio narration at kiosk,Like,Dislike
+K015,Download / share my records (ABHA),Expect,Like
+K015,Trust status panel,Live with,Neutral
+K015,Data deletion request,Like,Neutral
+K016,Multilingual consent wizard,Expect,Dislike
+K016,Doctor identity card,Like,Dislike
+K016,Plain-language access log,Like,Neutral
+K016,Per-partner consent toggles,Expect,Dislike
+K016,Care Moments (WhatsApp/SMS),Like,Neutral
+K016,Grievance with case ID,Neutral,Dislike
+K016,Audio narration at kiosk,Like,Live with
+K016,Download / share my records (ABHA),Like,Dislike
+K016,Trust status panel,Neutral,Expect
+K016,Data deletion request,Like,Neutral
+K017,Multilingual consent wizard,Expect,Dislike
+K017,Doctor identity card,Like,Live with
+K017,Plain-language access log,Expect,Dislike
+K017,Per-partner consent toggles,Neutral,Dislike
+K017,Care Moments (WhatsApp/SMS),Like,Dislike
+K017,Grievance with case ID,Expect,Neutral
+K017,Audio narration at kiosk,Expect,Neutral
+K017,Download / share my records (ABHA),Like,Dislike
+K017,Trust status panel,Like,Neutral
+K017,Data deletion request,Dislike,Neutral
+K018,Multilingual consent wizard,Expect,Neutral
+K018,Doctor identity card,Like,Dislike
+K018,Plain-language access log,Like,Neutral
+K018,Per-partner consent toggles,Like,Live with
+K018,Care Moments (WhatsApp/SMS),Expect,Dislike
+K018,Grievance with case ID,Live with,Dislike
+K018,Audio narration at kiosk,Like,Neutral
+K018,Download / share my records (ABHA),Like,Dislike
+K018,Trust status panel,Neutral,Live with
+K018,Data deletion request,Neutral,Neutral
+K019,Multilingual consent wizard,Expect,Dislike
+K019,Doctor identity card,Neutral,Neutral
+K019,Plain-language access log,Like,Live with
+K019,Per-partner consent toggles,Expect,Dislike
+K019,Care Moments (WhatsApp/SMS),Like,Live with
+K019,Grievance with case ID,Expect,Dislike
+K019,Audio narration at kiosk,Neutral,Neutral
+K019,Download / share my records (ABHA),Like,Live with
+K019,Trust status panel,Neutral,Neutral
+K019,Data deletion request,Live with,Neutral
+K020,Multilingual consent wizard,Like,Dislike
+K020,Doctor identity card,Like,Dislike
+K020,Plain-language access log,Like,Live with
+K020,Per-partner consent toggles,Expect,Like
+K020,Care Moments (WhatsApp/SMS),Neutral,Neutral
+K020,Grievance with case ID,Expect,Dislike
+K020,Audio narration at kiosk,Like,Neutral
+K020,Download / share my records (ABHA),Expect,Dislike
+K020,Trust status panel,Like,Neutral
+K020,Data deletion request,Like,Neutral
+K021,Multilingual consent wizard,Live with,Dislike
+K021,Doctor identity card,Expect,Dislike
+K021,Plain-language access log,Neutral,Neutral
+K021,Per-partner consent toggles,Like,Neutral
+K021,Care Moments (WhatsApp/SMS),Like,Dislike
+K021,Grievance with case ID,Expect,Dislike
+K021,Audio narration at kiosk,Like,Neutral
+K021,Download / share my records (ABHA),Neutral,Live with
+K021,Trust status panel,Like,Neutral
+K021,Data deletion request,Like,Neutral
+K022,Multilingual consent wizard,Expect,Dislike
+K022,Doctor identity card,Like,Dislike
+K022,Plain-language access log,Like,Neutral
+K022,Per-partner consent toggles,Dislike,Live with
+K022,Care Moments (WhatsApp/SMS),Expect,Dislike
+K022,Grievance with case ID,Expect,Dislike
+K022,Audio narration at kiosk,Like,Neutral
+K022,Download / share my records (ABHA),Like,Dislike
+K022,Trust status panel,Neutral,Neutral
+K022,Data deletion request,Like,Live with
+K023,Multilingual consent wizard,Like,Live with
+K023,Doctor identity card,Live with,Dislike
+K023,Plain-language access log,Neutral,Neutral
+K023,Per-partner consent toggles,Like,Dislike
+K023,Care Moments (WhatsApp/SMS),Like,Neutral
+K023,Grievance with case ID,Expect,Dislike
+K023,Audio narration at kiosk,Like,Expect
+K023,Download / share my records (ABHA),Like,Dislike
+K023,Trust status panel,Live with,Neutral
+K023,Data deletion request,Neutral,Neutral
+K024,Multilingual consent wizard,Expect,Dislike
+K024,Doctor identity card,Like,Dislike
+K024,Plain-language access log,Neutral,Neutral
+K024,Per-partner consent toggles,Expect,Dislike
+K024,Care Moments (WhatsApp/SMS),Neutral,Dislike
+K024,Grievance with case ID,Neutral,Neutral
+K024,Audio narration at kiosk,Like,Neutral
+K024,Download / share my records (ABHA),Like,Dislike
+K024,Trust status panel,Like,Neutral
+K024,Data deletion request,Expect,Neutral
+K025,Multilingual consent wizard,Expect,Dislike
+K025,Doctor identity card,Expect,Dislike
+K025,Plain-language access log,Like,Neutral
+K025,Per-partner consent toggles,Expect,Dislike
+K025,Care Moments (WhatsApp/SMS),Like,Dislike
+K025,Grievance with case ID,Expect,Live with
+K025,Audio narration at kiosk,Like,Neutral
+K025,Download / share my records (ABHA),Like,Dislike
+K025,Trust status panel,Neutral,Expect
+K025,Data deletion request,Live with,Neutral
+K026,Multilingual consent wizard,Expect,Dislike
+K026,Doctor identity card,Like,Dislike
+K026,Plain-language access log,Like,Neutral
+K026,Per-partner consent toggles,Like,Dislike
+K026,Care Moments (WhatsApp/SMS),Like,Neutral
+K026,Grievance with case ID,Neutral,Live with
+K026,Audio narration at kiosk,Neutral,Neutral
+K026,Download / share my records (ABHA),Like,Dislike
+K026,Trust status panel,Like,Neutral
+K026,Data deletion request,Like,Neutral
+K027,Multilingual consent wizard,Like,Like
+K027,Doctor identity card,Like,Dislike
+K027,Plain-language access log,Like,Neutral
+K027,Per-partner consent toggles,Like,Dislike
+K027,Care Moments (WhatsApp/SMS),Expect,Dislike
+K027,Grievance with case ID,Like,Dislike
+K027,Audio narration at kiosk,Like,Live with
+K027,Download / share my records (ABHA),Like,Dislike
+K027,Trust status panel,Neutral,Neutral
+K027,Data deletion request,Dislike,Neutral
+K028,Multilingual consent wizard,Expect,Live with
+K028,Doctor identity card,Neutral,Dislike
+K028,Plain-language access log,Like,Neutral
+K028,Per-partner consent toggles,Like,Dislike
+K028,Care Moments (WhatsApp/SMS),Like,Live with
+K028,Grievance with case ID,Neutral,Dislike
+K028,Audio narration at kiosk,Live with,Live with
+K028,Download / share my records (ABHA),Like,Live with
+K028,Trust status panel,Neutral,Expect
+K028,Data deletion request,Like,Dislike
+K029,Multilingual consent wizard,Neutral,Live with
+K029,Doctor identity card,Like,Expect
+K029,Plain-language access log,Like,Like
+K029,Per-partner consent toggles,Like,Dislike
+K029,Care Moments (WhatsApp/SMS),Like,Dislike
+K029,Grievance with case ID,Expect,Dislike
+K029,Audio narration at kiosk,Expect,Neutral
+K029,Download / share my records (ABHA),Expect,Dislike
+K029,Trust status panel,Neutral,Neutral
+K029,Data deletion request,Like,Neutral
+K030,Multilingual consent wizard,Neutral,Dislike
+K030,Doctor identity card,Like,Dislike
+K030,Plain-language access log,Like,Like
+K030,Per-partner consent toggles,Like,Dislike
+K030,Care Moments (WhatsApp/SMS),Like,Dislike
+K030,Grievance with case ID,Expect,Dislike
+K030,Audio narration at kiosk,Like,Neutral
+K030,Download / share my records (ABHA),Like,Neutral
+K030,Trust status panel,Expect,Neutral
+K030,Data deletion request,Like,Dislike
+K031,Multilingual consent wizard,Expect,Dislike
+K031,Doctor identity card,Like,Dislike
+K031,Plain-language access log,Like,Live with
+K031,Per-partner consent toggles,Neutral,Dislike
+K031,Care Moments (WhatsApp/SMS),Like,Dislike
+K031,Grievance with case ID,Like,Dislike
+K031,Audio narration at kiosk,Like,Neutral
+K031,Download / share my records (ABHA),Like,Dislike
+K031,Trust status panel,Expect,Neutral
+K031,Data deletion request,Like,Neutral
+K032,Multilingual consent wizard,Live with,Dislike
+K032,Doctor identity card,Like,Dislike
+K032,Plain-language access log,Dislike,Neutral
+K032,Per-partner consent toggles,Like,Live with
+K032,Care Moments (WhatsApp/SMS),Like,Dislike
+K032,Grievance with case ID,Neutral,Dislike
+K032,Audio narration at kiosk,Like,Neutral
+K032,Download / share my records (ABHA),Like,Dislike
+K032,Trust status panel,Neutral,Neutral
+K032,Data deletion request,Like,Neutral
+K033,Multilingual consent wizard,Expect,Dislike
+K033,Doctor identity card,Like,Dislike
+K033,Plain-language access log,Like,Neutral
+K033,Per-partner consent toggles,Like,Live with
+K033,Care Moments (WhatsApp/SMS),Like,Neutral
+K033,Grievance with case ID,Like,Dislike
+K033,Audio narration at kiosk,Neutral,Neutral
+K033,Download / share my records (ABHA),Expect,Live with
+K033,Trust status panel,Neutral,Neutral
+K033,Data deletion request,Neutral,Neutral
+K034,Multilingual consent wizard,Like,Expect
+K034,Doctor identity card,Like,Dislike
+K034,Plain-language access log,Neutral,Neutral
+K034,Per-partner consent toggles,Expect,Expect
+K034,Care Moments (WhatsApp/SMS),Expect,Dislike
+K034,Grievance with case ID,Expect,Dislike
+K034,Audio narration at kiosk,Like,Dislike
+K034,Download / share my records (ABHA),Like,Live with
+K034,Trust status panel,Neutral,Neutral
+K034,Data deletion request,Like,Neutral
+K035,Multilingual consent wizard,Like,Neutral
+K035,Doctor identity card,Live with,Dislike
+K035,Plain-language access log,Like,Neutral
+K035,Per-partner consent toggles,Like,Live with
+K035,Care Moments (WhatsApp/SMS),Like,Like
+K035,Grievance with case ID,Like,Dislike
+K035,Audio narration at kiosk,Like,Dislike
+K035,Download / share my records (ABHA),Like,Dislike
+K035,Trust status panel,Live with,Neutral
+K035,Data deletion request,Like,Neutral
+K036,Multilingual consent wizard,Like,Neutral
+K036,Doctor identity card,Like,Dislike
+K036,Plain-language access log,Like,Live with
+K036,Per-partner consent toggles,Like,Dislike
+K036,Care Moments (WhatsApp/SMS),Neutral,Dislike
+K036,Grievance with case ID,Like,Dislike
+K036,Audio narration at kiosk,Like,Neutral
+K036,Download / share my records (ABHA),Like,Dislike
+K036,Trust status panel,Neutral,Live with
+K036,Data deletion request,Live with,Live with
+K037,Multilingual consent wizard,Neutral,Dislike
+K037,Doctor identity card,Like,Dislike
+K037,Plain-language access log,Like,Neutral
+K037,Per-partner consent toggles,Like,Live with
+K037,Care Moments (WhatsApp/SMS),Like,Dislike
+K037,Grievance with case ID,Neutral,Dislike
+K037,Audio narration at kiosk,Neutral,Expect
+K037,Download / share my records (ABHA),Expect,Dislike
+K037,Trust status panel,Like,Neutral
+K037,Data deletion request,Like,Neutral
+K038,Multilingual consent wizard,Neutral,Dislike
+K038,Doctor identity card,Expect,Dislike
+K038,Plain-language access log,Neutral,Dislike
+K038,Per-partner consent toggles,Live with,Dislike
+K038,Care Moments (WhatsApp/SMS),Like,Neutral
+K038,Grievance with case ID,Live with,Neutral
+K038,Audio narration at kiosk,Like,Neutral
+K038,Download / share my records (ABHA),Like,Dislike
+K038,Trust status panel,Neutral,Live with
+K038,Data deletion request,Like,Live with
+K039,Multilingual consent wizard,Expect,Dislike
+K039,Doctor identity card,Like,Dislike
+K039,Plain-language access log,Neutral,Neutral
+K039,Per-partner consent toggles,Expect,Dislike
+K039,Care Moments (WhatsApp/SMS),Like,Dislike
+K039,Grievance with case ID,Expect,Dislike
+K039,Audio narration at kiosk,Dislike,Neutral
+K039,Download / share my records (ABHA),Like,Dislike
+K039,Trust status panel,Neutral,Neutral
+K039,Data deletion request,Dislike,Neutral
+K040,Multilingual consent wizard,Live with,Dislike
+K040,Doctor identity card,Like,Neutral
+K040,Plain-language access log,Like,Neutral
+K040,Per-partner consent toggles,Expect,Dislike
+K040,Care Moments (WhatsApp/SMS),Like,Expect
+K040,Grievance with case ID,Dislike,Like
+K040,Audio narration at kiosk,Live with,Live with
+K040,Download / share my records (ABHA),Neutral,Dislike
+K040,Trust status panel,Like,Neutral
+K040,Data deletion request,Like,Live with
+K041,Multilingual consent wizard,Expect,Dislike
+K041,Doctor identity card,Neutral,Dislike
+K041,Plain-language access log,Live with,Live with
+K041,Per-partner consent toggles,Like,Dislike
+K041,Care Moments (WhatsApp/SMS),Like,Neutral
+K041,Grievance with case ID,Expect,Like
+K041,Audio narration at kiosk,Like,Neutral
+K041,Download / share my records (ABHA),Like,Dislike
+K041,Trust status panel,Expect,Neutral
+K041,Data deletion request,Like,Neutral
+K042,Multilingual consent wizard,Neutral,Dislike
+K042,Doctor identity card,Neutral,Neutral
+K042,Plain-language access log,Like,Live with
+K042,Per-partner consent toggles,Like,Neutral
+K042,Care Moments (WhatsApp/SMS),Like,Dislike
+K042,Grievance with case ID,Expect,Dislike
+K042,Audio narration at kiosk,Neutral,Neutral
+K042,Download / share my records (ABHA),Like,Live with
+K042,Trust status panel,Live with,Neutral
+K042,Data deletion request,Like,Neutral
+K043,Multilingual consent wizard,Expect,Live with
+K043,Doctor identity card,Expect,Neutral
+K043,Plain-language access log,Like,Neutral
+K043,Per-partner consent toggles,Neutral,Dislike
+K043,Care Moments (WhatsApp/SMS),Like,Neutral
+K043,Grievance with case ID,Like,Dislike
+K043,Audio narration at kiosk,Live with,Neutral
+K043,Download / share my records (ABHA),Like,Dislike
+K043,Trust status panel,Like,Live with
+K043,Data deletion request,Like,Neutral
+K044,Multilingual consent wizard,Neutral,Dislike
+K044,Doctor identity card,Like,Dislike
+K044,Plain-language access log,Live with,Live with
+K044,Per-partner consent toggles,Like,Dislike
+K044,Care Moments (WhatsApp/SMS),Like,Live with
+K044,Grievance with case ID,Expect,Dislike
+K044,Audio narration at kiosk,Neutral,Neutral
+K044,Download / share my records (ABHA),Like,Dislike
+K044,Trust status panel,Neutral,Neutral
+K044,Data deletion request,Neutral,Live with
+K045,Multilingual consent wizard,Live with,Dislike
+K045,Doctor identity card,Expect,Live with
+K045,Plain-language access log,Neutral,Live with
+K045,Per-partner consent toggles,Like,Neutral
+K045,Care Moments (WhatsApp/SMS),Live with,Live with
+K045,Grievance with case ID,Expect,Dislike
+K045,Audio narration at kiosk,Neutral,Neutral
+K045,Download / share my records (ABHA),Like,Dislike
+K045,Trust status panel,Neutral,Neutral
+K045,Data deletion request,Like,Live with
+K046,Multilingual consent wizard,Neutral,Live with
+K046,Doctor identity card,Like,Dislike
+K046,Plain-language access log,Neutral,Neutral
+K046,Per-partner consent toggles,Like,Dislike
+K046,Care Moments (WhatsApp/SMS),Like,Dislike
+K046,Grievance with case ID,Expect,Dislike
+K046,Audio narration at kiosk,Neutral,Live with
+K046,Download / share my records (ABHA),Like,Dislike
+K046,Trust status panel,Neutral,Neutral
+K046,Data deletion request,Neutral,Neutral
+K047,Multilingual consent wizard,Dislike,Dislike
+K047,Doctor identity card,Like,Neutral
+K047,Plain-language access log,Like,Dislike
+K047,Per-partner consent toggles,Expect,Dislike
+K047,Care Moments (WhatsApp/SMS),Expect,Dislike
+K047,Grievance with case ID,Expect,Dislike
+K047,Audio narration at kiosk,Like,Neutral
+K047,Download / share my records (ABHA),Like,Dislike
+K047,Trust status panel,Dislike,Live with
+K047,Data deletion request,Like,Neutral
+K048,Multilingual consent wizard,Expect,Dislike
+K048,Doctor identity card,Dislike,Dislike
+K048,Plain-language access log,Like,Like
+K048,Per-partner consent toggles,Like,Dislike
+K048,Care Moments (WhatsApp/SMS),Like,Dislike
+K048,Grievance with case ID,Live with,Dislike
+K048,Audio narration at kiosk,Like,Neutral
+K048,Download / share my records (ABHA),Like,Dislike
+K048,Trust status panel,Neutral,Neutral
+K048,Data deletion request,Like,Live with
+K049,Multilingual consent wizard,Like,Live with
+K049,Doctor identity card,Expect,Dislike
+K049,Plain-language access log,Like,Dislike
+K049,Per-partner consent toggles,Expect,Dislike
+K049,Care Moments (WhatsApp/SMS),Expect,Dislike
+K049,Grievance with case ID,Expect,Dislike
+K049,Audio narration at kiosk,Like,Live with
+K049,Download / share my records (ABHA),Like,Dislike
+K049,Trust status panel,Like,Neutral
+K049,Data deletion request,Neutral,Live with
+K050,Multilingual consent wizard,Neutral,Neutral
+K050,Doctor identity card,Like,Like
+K050,Plain-language access log,Like,Expect
+K050,Per-partner consent toggles,Like,Live with
+K050,Care Moments (WhatsApp/SMS),Like,Dislike
+K050,Grievance with case ID,Expect,Dislike
+K050,Audio narration at kiosk,Live with,Neutral
+K050,Download / share my records (ABHA),Like,Dislike
+K050,Trust status panel,Neutral,Live with
+K050,Data deletion request,Neutral,Neutral
+K051,Multilingual consent wizard,Like,Dislike
+K051,Doctor identity card,Neutral,Live with
+K051,Plain-language access log,Neutral,Live with
+K051,Per-partner consent toggles,Like,Dislike
+K051,Care Moments (WhatsApp/SMS),Neutral,Live with
+K051,Grievance with case ID,Expect,Dislike
+K051,Audio narration at kiosk,Like,Neutral
+K051,Download / share my records (ABHA),Expect,Dislike
+K051,Trust status panel,Neutral,Neutral
+K051,Data deletion request,Live with,Neutral
+K052,Multilingual consent wizard,Expect,Dislike
+K052,Doctor identity card,Neutral,Live with
+K052,Plain-language access log,Like,Neutral
+K052,Per-partner consent toggles,Like,Dislike
+K052,Care Moments (WhatsApp/SMS),Like,Dislike
+K052,Grievance with case ID,Neutral,Live with
+K052,Audio narration at kiosk,Like,Live with
+K052,Download / share my records (ABHA),Like,Dislike
+K052,Trust status panel,Neutral,Live with
+K052,Data deletion request,Like,Neutral
+K053,Multilingual consent wizard,Expect,Dislike
+K053,Doctor identity card,Like,Live with
+K053,Plain-language access log,Like,Dislike
+K053,Per-partner consent toggles,Expect,Neutral
+K053,Care Moments (WhatsApp/SMS),Expect,Dislike
+K053,Grievance with case ID,Like,Neutral
+K053,Audio narration at kiosk,Like,Expect
+K053,Download / share my records (ABHA),Like,Neutral
+K053,Trust status panel,Like,Neutral
+K053,Data deletion request,Like,Live with
+K054,Multilingual consent wizard,Neutral,Dislike
+K054,Doctor identity card,Like,Dislike
+K054,Plain-language access log,Like,Like
+K054,Per-partner consent toggles,Expect,Dislike
+K054,Care Moments (WhatsApp/SMS),Expect,Live with
+K054,Grievance with case ID,Neutral,Dislike
+K054,Audio narration at kiosk,Like,Dislike
+K054,Download / share my records (ABHA),Expect,Dislike
+K054,Trust status panel,Neutral,Live with
+K054,Data deletion request,Neutral,Live with
+K055,Multilingual consent wizard,Expect,Live with
+K055,Doctor identity card,Like,Dislike
+K055,Plain-language access log,Neutral,Neutral
+K055,Per-partner consent toggles,Like,Dislike
+K055,Care Moments (WhatsApp/SMS),Live with,Dislike
+K055,Grievance with case ID,Expect,Live with
+K055,Audio narration at kiosk,Like,Dislike
+K055,Download / share my records (ABHA),Like,Live with
+K055,Trust status panel,Like,Neutral
+K055,Data deletion request,Like,Neutral
+K056,Multilingual consent wizard,Like,Dislike
+K056,Doctor identity card,Like,Dislike
+K056,Plain-language access log,Like,Neutral
+K056,Per-partner consent toggles,Neutral,Live with
+K056,Care Moments (WhatsApp/SMS),Like,Neutral
+K056,Grievance with case ID,Expect,Neutral
+K056,Audio narration at kiosk,Neutral,Dislike
+K056,Download / share my records (ABHA),Like,Dislike
+K056,Trust status panel,Live with,Neutral
+K056,Data deletion request,Neutral,Neutral
+K057,Multilingual consent wizard,Expect,Dislike
+K057,Doctor identity card,Expect,Dislike
+K057,Plain-language access log,Like,Neutral
+K057,Per-partner consent toggles,Like,Dislike
+K057,Care Moments (WhatsApp/SMS),Expect,Dislike
+K057,Grievance with case ID,Expect,Dislike
+K057,Audio narration at kiosk,Like,Neutral
+K057,Download / share my records (ABHA),Neutral,Live with
+K057,Trust status panel,Live with,Neutral
+K057,Data deletion request,Like,Neutral
+K058,Multilingual consent wizard,Like,Dislike
+K058,Doctor identity card,Like,Expect
+K058,Plain-language access log,Like,Like
+K058,Per-partner consent toggles,Like,Like
+K058,Care Moments (WhatsApp/SMS),Live with,Dislike
+K058,Grievance with case ID,Neutral,Expect
+K058,Audio narration at kiosk,Like,Neutral
+K058,Download / share my records (ABHA),Neutral,Dislike
+K058,Trust status panel,Like,Neutral
+K058,Data deletion request,Like,Neutral
+K059,Multilingual consent wizard,Neutral,Live with
+K059,Doctor identity card,Neutral,Dislike
+K059,Plain-language access log,Neutral,Live with
+K059,Per-partner consent toggles,Neutral,Dislike
+K059,Care Moments (WhatsApp/SMS),Like,Live with
+K059,Grievance with case ID,Live with,Dislike
+K059,Audio narration at kiosk,Live with,Neutral
+K059,Download / share my records (ABHA),Like,Dislike
+K059,Trust status panel,Expect,Neutral
+K059,Data deletion request,Neutral,Neutral
+K060,Multilingual consent wizard,Expect,Live with
+K060,Doctor identity card,Like,Dislike
+K060,Plain-language access log,Like,Neutral
+K060,Per-partner consent toggles,Like,Neutral
+K060,Care Moments (WhatsApp/SMS),Like,Dislike
+K060,Grievance with case ID,Neutral,Dislike
+K060,Audio narration at kiosk,Like,Neutral
+K060,Download / share my records (ABHA),Like,Dislike
+K060,Trust status panel,Live with,Neutral
+K060,Data deletion request,Neutral,Live with
+K061,Multilingual consent wizard,Expect,Dislike
+K061,Doctor identity card,Like,Dislike
+K061,Plain-language access log,Neutral,Live with
+K061,Per-partner consent toggles,Like,Dislike
+K061,Care Moments (WhatsApp/SMS),Like,Dislike
+K061,Grievance with case ID,Live with,Dislike
+K061,Audio narration at kiosk,Like,Neutral
+K061,Download / share my records (ABHA),Like,Dislike
+K061,Trust status panel,Expect,Live with
+K061,Data deletion request,Neutral,Neutral
+K062,Multilingual consent wizard,Neutral,Dislike
+K062,Doctor identity card,Like,Dislike
+K062,Plain-language access log,Like,Neutral
+K062,Per-partner consent toggles,Expect,Dislike
+K062,Care Moments (WhatsApp/SMS),Like,Dislike
+K062,Grievance with case ID,Expect,Dislike
+K062,Audio narration at kiosk,Like,Live with
+K062,Download / share my records (ABHA),Like,Dislike
+K062,Trust status panel,Live with,Neutral
+K062,Data deletion request,Like,Expect
+K063,Multilingual consent wizard,Expect,Dislike
+K063,Doctor identity card,Expect,Live with
+K063,Plain-language access log,Neutral,Dislike
+K063,Per-partner consent toggles,Neutral,Dislike
+K063,Care Moments (WhatsApp/SMS),Like,Dislike
+K063,Grievance with case ID,Like,Live with
+K063,Audio narration at kiosk,Neutral,Neutral
+K063,Download / share my records (ABHA),Like,Dislike
+K063,Trust status panel,Neutral,Neutral
+K063,Data deletion request,Like,Neutral
+K064,Multilingual consent wizard,Like,Dislike
+K064,Doctor identity card,Like,Dislike
+K064,Plain-language access log,Live with,Neutral
+K064,Per-partner consent toggles,Like,Dislike
+K064,Care Moments (WhatsApp/SMS),Neutral,Dislike
+K064,Grievance with case ID,Neutral,Dislike
+K064,Audio narration at kiosk,Like,Live with
+K064,Download / share my records (ABHA),Like,Dislike
+K064,Trust status panel,Neutral,Live with
+K064,Data deletion request,Like,Dislike
+K065,Multilingual consent wizard,Expect,Dislike
+K065,Doctor identity card,Live with,Dislike
+K065,Plain-language access log,Like,Live with
+K065,Per-partner consent toggles,Like,Live with
+K065,Care Moments (WhatsApp/SMS),Like,Dislike
+K065,Grievance with case ID,Expect,Dislike
+K065,Audio narration at kiosk,Like,Live with
+K065,Download / share my records (ABHA),Like,Dislike
+K065,Trust status panel,Expect,Neutral
+K065,Data deletion request,Like,Neutral
+K066,Multilingual consent wizard,Neutral,Dislike
+K066,Doctor identity card,Like,Dislike
+K066,Plain-language access log,Like,Neutral
+K066,Per-partner consent toggles,Like,Dislike
+K066,Care Moments (WhatsApp/SMS),Like,Dislike
+K066,Grievance with case ID,Like,Dislike
+K066,Audio narration at kiosk,Neutral,Live with
+K066,Download / share my records (ABHA),Like,Dislike
+K066,Trust status panel,Neutral,Live with
+K066,Data deletion request,Like,Neutral
+K067,Multilingual consent wizard,Expect,Dislike
+K067,Doctor identity card,Expect,Dislike
+K067,Plain-language access log,Neutral,Neutral
+K067,Per-partner consent toggles,Like,Dislike
+K067,Care Moments (WhatsApp/SMS),Like,Dislike
+K067,Grievance with case ID,Expect,Neutral
+K067,Audio narration at kiosk,Like,Expect
+K067,Download / share my records (ABHA),Like,Dislike
+K067,Trust status panel,Neutral,Dislike
+K067,Data deletion request,Neutral,Neutral
+K068,Multilingual consent wizard,Expect,Live with
+K068,Doctor identity card,Like,Dislike
+K068,Plain-language access log,Like,Neutral
+K068,Per-partner consent toggles,Like,Neutral
+K068,Care Moments (WhatsApp/SMS),Like,Like
+K068,Grievance with case ID,Expect,Live with
+K068,Audio narration at kiosk,Live with,Live with
+K068,Download / share my records (ABHA),Like,Neutral
+K068,Trust status panel,Expect,Neutral
+K068,Data deletion request,Live with,Neutral
+K069,Multilingual consent wizard,Expect,Dislike
+K069,Doctor identity card,Like,Dislike
+K069,Plain-language access log,Like,Neutral
+K069,Per-partner consent toggles,Expect,Dislike
+K069,Care Moments (WhatsApp/SMS),Like,Dislike
+K069,Grievance with case ID,Expect,Dislike
+K069,Audio narration at kiosk,Neutral,Dislike
+K069,Download / share my records (ABHA),Like,Dislike
+K069,Trust status panel,Neutral,Neutral
+K069,Data deletion request,Like,Live with
+K070,Multilingual consent wizard,Expect,Dislike
+K070,Doctor identity card,Dislike,Like
+K070,Plain-language access log,Dislike,Neutral
+K070,Per-partner consent toggles,Expect,Dislike
+K070,Care Moments (WhatsApp/SMS),Like,Neutral
+K070,Grievance with case ID,Expect,Expect
+K070,Audio narration at kiosk,Like,Live with
+K070,Download / share my records (ABHA),Like,Dislike
+K070,Trust status panel,Live with,Neutral
+K070,Data deletion request,Like,Neutral
+K071,Multilingual consent wizard,Expect,Dislike
+K071,Doctor identity card,Expect,Dislike
+K071,Plain-language access log,Like,Neutral
+K071,Per-partner consent toggles,Neutral,Neutral
+K071,Care Moments (WhatsApp/SMS),Like,Live with
+K071,Grievance with case ID,Neutral,Dislike
+K071,Audio narration at kiosk,Like,Dislike
+K071,Download / share my records (ABHA),Live with,Dislike
+K071,Trust status panel,Like,Neutral
+K071,Data deletion request,Like,Neutral
+K072,Multilingual consent wizard,Expect,Dislike
+K072,Doctor identity card,Dislike,Dislike
+K072,Plain-language access log,Neutral,Neutral
+K072,Per-partner consent toggles,Like,Dislike
+K072,Care Moments (WhatsApp/SMS),Like,Dislike
+K072,Grievance with case ID,Neutral,Dislike
+K072,Audio narration at kiosk,Like,Live with
+K072,Download / share my records (ABHA),Like,Dislike
+K072,Trust status panel,Neutral,Neutral
+K072,Data deletion request,Neutral,Neutral
+K073,Multilingual consent wizard,Live with,Dislike
+K073,Doctor identity card,Expect,Live with
+K073,Plain-language access log,Like,Neutral
+K073,Per-partner consent toggles,Live with,Neutral
+K073,Care Moments (WhatsApp/SMS),Like,Live with
+K073,Grievance with case ID,Expect,Dislike
+K073,Audio narration at kiosk,Like,Live with
+K073,Download / share my records (ABHA),Like,Dislike
+K073,Trust status panel,Neutral,Neutral
+K073,Data deletion request,Live with,Neutral
+K074,Multilingual consent wizard,Expect,Dislike
+K074,Doctor identity card,Like,Dislike
+K074,Plain-language access log,Like,Neutral
+K074,Per-partner consent toggles,Like,Neutral
+K074,Care Moments (WhatsApp/SMS),Like,Dislike
+K074,Grievance with case ID,Expect,Dislike
+K074,Audio narration at kiosk,Like,Live with
+K074,Download / share my records (ABHA),Expect,Dislike
+K074,Trust status panel,Neutral,Neutral
+K074,Data deletion request,Neutral,Neutral
+K075,Multilingual consent wizard,Expect,Dislike
+K075,Doctor identity card,Live with,Dislike
+K075,Plain-language access log,Like,Dislike
+K075,Per-partner consent toggles,Like,Dislike
+K075,Care Moments (WhatsApp/SMS),Like,Dislike
+K075,Grievance with case ID,Like,Dislike
+K075,Audio narration at kiosk,Like,Dislike
+K075,Download / share my records (ABHA),Expect,Neutral
+K075,Trust status panel,Like,Expect
+K075,Data deletion request,Neutral,Live with
+K076,Multilingual consent wizard,Expect,Live with
+K076,Doctor identity card,Like,Dislike
+K076,Plain-language access log,Like,Expect
+K076,Per-partner consent toggles,Like,Dislike
+K076,Care Moments (WhatsApp/SMS),Like,Dislike
+K076,Grievance with case ID,Live with,Dislike
+K076,Audio narration at kiosk,Like,Neutral
+K076,Download / share my records (ABHA),Expect,Dislike
+K076,Trust status panel,Neutral,Neutral
+K076,Data deletion request,Like,Like
+K077,Multilingual consent wizard,Neutral,Dislike
+K077,Doctor identity card,Neutral,Live with
+K077,Plain-language access log,Like,Neutral
+K077,Per-partner consent toggles,Like,Live with
+K077,Care Moments (WhatsApp/SMS),Like,Live with
+K077,Grievance with case ID,Expect,Dislike
+K077,Audio narration at kiosk,Neutral,Neutral
+K077,Download / share my records (ABHA),Like,Dislike
+K077,Trust status panel,Like,Neutral
+K077,Data deletion request,Neutral,Neutral
+K078,Multilingual consent wizard,Expect,Dislike
+K078,Doctor identity card,Like,Dislike
+K078,Plain-language access log,Neutral,Live with
+K078,Per-partner consent toggles,Like,Dislike
+K078,Care Moments (WhatsApp/SMS),Like,Dislike
+K078,Grievance with case ID,Like,Neutral
+K078,Audio narration at kiosk,Dislike,Neutral
+K078,Download / share my records (ABHA),Like,Dislike
+K078,Trust status panel,Live with,Live with
+K078,Data deletion request,Like,Dislike
+K079,Multilingual consent wizard,Expect,Dislike
+K079,Doctor identity card,Like,Dislike
+K079,Plain-language access log,Neutral,Live with
+K079,Per-partner consent toggles,Like,Dislike
+K079,Care Moments (WhatsApp/SMS),Like,Dislike
+K079,Grievance with case ID,Expect,Dislike
+K079,Audio narration at kiosk,Neutral,Live with
+K079,Download / share my records (ABHA),Like,Neutral
+K079,Trust status panel,Like,Live with
+K079,Data deletion request,Expect,Live with
+K080,Multilingual consent wizard,Expect,Dislike
+K080,Doctor identity card,Like,Dislike
+K080,Plain-language access log,Like,Neutral
+K080,Per-partner consent toggles,Neutral,Dislike
+K080,Care Moments (WhatsApp/SMS),Like,Dislike
+K080,Grievance with case ID,Like,Neutral
+K080,Audio narration at kiosk,Neutral,Neutral
+K080,Download / share my records (ABHA),Like,Live with
+K080,Trust status panel,Live with,Neutral
+K080,Data deletion request,Like,Live with
+K081,Multilingual consent wizard,Expect,Live with
+K081,Doctor identity card,Like,Dislike
+K081,Plain-language access log,Live with,Neutral
+K081,Per-partner consent toggles,Like,Dislike
+K081,Care Moments (WhatsApp/SMS),Like,Dislike
+K081,Grievance with case ID,Expect,Dislike
+K081,Audio narration at kiosk,Like,Live with
+K081,Download / share my records (ABHA),Like,Dislike
+K081,Trust status panel,Like,Dislike
+K081,Data deletion request,Like,Live with
+K082,Multilingual consent wizard,Expect,Dislike
+K082,Doctor identity card,Like,Dislike
+K082,Plain-language access log,Neutral,Expect
+K082,Per-partner consent toggles,Like,Dislike
+K082,Care Moments (WhatsApp/SMS),Like,Expect
+K082,Grievance with case ID,Expect,Dislike
+K082,Audio narration at kiosk,Neutral,Neutral
+K082,Download / share my records (ABHA),Like,Dislike
+K082,Trust status panel,Neutral,Neutral
+K082,Data deletion request,Like,Live with
+K083,Multilingual consent wizard,Expect,Live with
+K083,Doctor identity card,Neutral,Dislike
+K083,Plain-language access log,Like,Neutral
+K083,Per-partner consent toggles,Like,Dislike
+K083,Care Moments (WhatsApp/SMS),Like,Dislike
+K083,Grievance with case ID,Like,Dislike
+K083,Audio narration at kiosk,Neutral,Dislike
+K083,Download / share my records (ABHA),Expect,Dislike
+K083,Trust status panel,Expect,Expect
+K083,Data deletion request,Like,Neutral
+K084,Multilingual consent wizard,Expect,Neutral
+K084,Doctor identity card,Like,Dislike
+K084,Plain-language access log,Like,Neutral
+K084,Per-partner consent toggles,Like,Dislike
+K084,Care Moments (WhatsApp/SMS),Dislike,Dislike
+K084,Grievance with case ID,Dislike,Dislike
+K084,Audio narration at kiosk,Neutral,Neutral
+K084,Download / share my records (ABHA),Like,Dislike
+K084,Trust status panel,Like,Live with
+K084,Data deletion request,Dislike,Neutral
+K085,Multilingual consent wizard,Expect,Dislike
+K085,Doctor identity card,Like,Neutral
+K085,Plain-language access log,Like,Live with
+K085,Per-partner consent toggles,Neutral,Dislike
+K085,Care Moments (WhatsApp/SMS),Like,Dislike
+K085,Grievance with case ID,Neutral,Live with
+K085,Audio narration at kiosk,Like,Neutral
+K085,Download / share my records (ABHA),Like,Dislike
+K085,Trust status panel,Neutral,Neutral
+K085,Data deletion request,Like,Neutral
+K086,Multilingual consent wizard,Expect,Dislike
+K086,Doctor identity card,Like,Dislike
+K086,Plain-language access log,Expect,Neutral
+K086,Per-partner consent toggles,Like,Neutral
+K086,Care Moments (WhatsApp/SMS),Neutral,Dislike
+K086,Grievance with case ID,Like,Live with
+K086,Audio narration at kiosk,Like,Live with
+K086,Download / share my records (ABHA),Like,Dislike
+K086,Trust status panel,Expect,Live with
+K086,Data deletion request,Neutral,Dislike
+K087,Multilingual consent wizard,Expect,Dislike
+K087,Doctor identity card,Like,Dislike
+K087,Plain-language access log,Neutral,Neutral
+K087,Per-partner consent toggles,Like,Like
+K087,Care Moments (WhatsApp/SMS),Neutral,Expect
+K087,Grievance with case ID,Expect,Dislike
+K087,Audio narration at kiosk,Like,Neutral
+K087,Download / share my records (ABHA),Like,Dislike
+K087,Trust status panel,Live with,Neutral
+K087,Data deletion request,Like,Neutral
+K088,Multilingual consent wizard,Expect,Neutral
+K088,Doctor identity card,Expect,Dislike
+K088,Plain-language access log,Like,Neutral
+K088,Per-partner consent toggles,Like,Live with
+K088,Care Moments (WhatsApp/SMS),Like,Dislike
+K088,Grievance with case ID,Expect,Dislike
+K088,Audio narration at kiosk,Neutral,Neutral
+K088,Download / share my records (ABHA),Like,Dislike
+K088,Trust status panel,Like,Live with
+K088,Data deletion request,Neutral,Live with
+K089,Multilingual consent wizard,Expect,Dislike
+K089,Doctor identity card,Like,Live with
+K089,Plain-language access log,Like,Like
+K089,Per-partner consent toggles,Like,Live with
+K089,Care Moments (WhatsApp/SMS),Like,Like
+K089,Grievance with case ID,Like,Dislike
+K089,Audio narration at kiosk,Neutral,Neutral
+K089,Download / share my records (ABHA),Like,Live with
+K089,Trust status panel,Expect,Like
+K089,Data deletion request,Like,Neutral
+K090,Multilingual consent wizard,Like,Dislike
+K090,Doctor identity card,Expect,Dislike
+K090,Plain-language access log,Neutral,Neutral
+K090,Per-partner consent toggles,Like,Dislike
+K090,Care Moments (WhatsApp/SMS),Like,Neutral
+K090,Grievance with case ID,Like,Dislike
+K090,Audio narration at kiosk,Neutral,Live with
+K090,Download / share my records (ABHA),Dislike,Dislike
+K090,Trust status panel,Live with,Live with
+K090,Data deletion request,Live with,Dislike
+K091,Multilingual consent wizard,Expect,Live with
+K091,Doctor identity card,Like,Dislike
+K091,Plain-language access log,Like,Live with
+K091,Per-partner consent toggles,Neutral,Live with
+K091,Care Moments (WhatsApp/SMS),Like,Dislike
+K091,Grievance with case ID,Like,Like
+K091,Audio narration at kiosk,Like,Neutral
+K091,Download / share my records (ABHA),Expect,Dislike
+K091,Trust status panel,Expect,Neutral
+K091,Data deletion request,Like,Live with
+K092,Multilingual consent wizard,Expect,Dislike
+K092,Doctor identity card,Like,Dislike
+K092,Plain-language access log,Like,Neutral
+K092,Per-partner consent toggles,Neutral,Neutral
+K092,Care Moments (WhatsApp/SMS),Neutral,Dislike
+K092,Grievance with case ID,Expect,Like
+K092,Audio narration at kiosk,Like,Neutral
+K092,Download / share my records (ABHA),Neutral,Dislike
+K092,Trust status panel,Neutral,Like
+K092,Data deletion request,Like,Live with
+K093,Multilingual consent wizard,Expect,Dislike
+K093,Doctor identity card,Expect,Dislike
+K093,Plain-language access log,Like,Neutral
+K093,Per-partner consent toggles,Like,Dislike
+K093,Care Moments (WhatsApp/SMS),Neutral,Neutral
+K093,Grievance with case ID,Like,Dislike
+K093,Audio narration at kiosk,Like,Neutral
+K093,Download / share my records (ABHA),Like,Expect
+K093,Trust status panel,Like,Live with
+K093,Data deletion request,Like,Neutral
+K094,Multilingual consent wizard,Neutral,Dislike
+K094,Doctor identity card,Like,Expect
+K094,Plain-language access log,Like,Expect
+K094,Per-partner consent toggles,Like,Live with
+K094,Care Moments (WhatsApp/SMS),Like,Expect
+K094,Grievance with case ID,Expect,Dislike
+K094,Audio narration at kiosk,Like,Live with
+K094,Download / share my records (ABHA),Expect,Dislike
+K094,Trust status panel,Dislike,Live with
+K094,Data deletion request,Like,Neutral
+K095,Multilingual consent wizard,Expect,Dislike
+K095,Doctor identity card,Expect,Live with
+K095,Plain-language access log,Expect,Dislike
+K095,Per-partner consent toggles,Like,Dislike
+K095,Care Moments (WhatsApp/SMS),Like,Dislike
+K095,Grievance with case ID,Live with,Neutral
+K095,Audio narration at kiosk,Like,Live with
+K095,Download / share my records (ABHA),Neutral,Dislike
+K095,Trust status panel,Expect,Neutral
+K095,Data deletion request,Like,Live with
+K096,Multilingual consent wizard,Live with,Dislike
+K096,Doctor identity card,Like,Dislike
+K096,Plain-language access log,Neutral,Live with
+K096,Per-partner consent toggles,Like,Dislike
+K096,Care Moments (WhatsApp/SMS),Expect,Dislike
+K096,Grievance with case ID,Expect,Dislike
+K096,Audio narration at kiosk,Like,Neutral
+K096,Download / share my records (ABHA),Like,Dislike
+K096,Trust status panel,Neutral,Neutral
+K096,Data deletion request,Like,Neutral
+K097,Multilingual consent wizard,Expect,Dislike
+K097,Doctor identity card,Like,Dislike
+K097,Plain-language access log,Like,Live with
+K097,Per-partner consent toggles,Like,Neutral
+K097,Care Moments (WhatsApp/SMS),Like,Neutral
+K097,Grievance with case ID,Expect,Expect
+K097,Audio narration at kiosk,Like,Neutral
+K097,Download / share my records (ABHA),Like,Neutral
+K097,Trust status panel,Neutral,Live with
+K097,Data deletion request,Like,Live with
+K098,Multilingual consent wizard,Expect,Dislike
+K098,Doctor identity card,Like,Live with
+K098,Plain-language access log,Like,Neutral
+K098,Per-partner consent toggles,Like,Dislike
+K098,Care Moments (WhatsApp/SMS),Like,Dislike
+K098,Grievance with case ID,Expect,Dislike
+K098,Audio narration at kiosk,Neutral,Live with
+K098,Download / share my records (ABHA),Live with,Neutral
+K098,Trust status panel,Neutral,Like
+K098,Data deletion request,Like,Live with
+K099,Multilingual consent wizard,Neutral,Live with
+K099,Doctor identity card,Like,Neutral
+K099,Plain-language access log,Like,Neutral
+K099,Per-partner consent toggles,Dislike,Dislike
+K099,Care Moments (WhatsApp/SMS),Expect,Neutral
+K099,Grievance with case ID,Expect,Dislike
+K099,Audio narration at kiosk,Like,Neutral
+K099,Download / share my records (ABHA),Like,Dislike
+K099,Trust status panel,Neutral,Neutral
+K099,Data deletion request,Neutral,Expect
+K100,Multilingual consent wizard,Expect,Dislike
+K100,Doctor identity card,Like,Neutral
+K100,Plain-language access log,Neutral,Neutral
+K100,Per-partner consent toggles,Like,Dislike
+K100,Care Moments (WhatsApp/SMS),Like,Neutral
+K100,Grievance with case ID,Expect,Dislike
+K100,Audio narration at kiosk,Like,Neutral
+K100,Download / share my records (ABHA),Expect,Live with
+K100,Trust status panel,Like,Like
+K100,Data deletion request,Dislike,Expect
+K101,Multilingual consent wizard,Expect,Dislike
+K101,Doctor identity card,Like,Neutral
+K101,Plain-language access log,Neutral,Dislike
+K101,Per-partner consent toggles,Dislike,Dislike
+K101,Care Moments (WhatsApp/SMS),Like,Dislike
+K101,Grievance with case ID,Neutral,Live with
+K101,Audio narration at kiosk,Expect,Live with
+K101,Download / share my records (ABHA),Like,Dislike
+K101,Trust status panel,Neutral,Neutral
+K101,Data deletion request,Neutral,Neutral
+K102,Multilingual consent wizard,Expect,Dislike
+K102,Doctor identity card,Like,Dislike
+K102,Plain-language access log,Neutral,Live with
+K102,Per-partner consent toggles,Like,Dislike
+K102,Care Moments (WhatsApp/SMS),Like,Dislike
+K102,Grievance with case ID,Like,Dislike
+K102,Audio narration at kiosk,Neutral,Dislike
+K102,Download / share my records (ABHA),Like,Like
+K102,Trust status panel,Live with,Neutral
+K102,Data deletion request,Like,Neutral
+K103,Multilingual consent wizard,Expect,Dislike
+K103,Doctor identity card,Like,Dislike
+K103,Plain-language access log,Live with,Neutral
+K103,Per-partner consent toggles,Like,Dislike
+K103,Care Moments (WhatsApp/SMS),Like,Expect
+K103,Grievance with case ID,Expect,Live with
+K103,Audio narration at kiosk,Neutral,Live with
+K103,Download / share my records (ABHA),Neutral,Dislike
+K103,Trust status panel,Live with,Live with
+K103,Data deletion request,Like,Neutral
+K104,Multilingual consent wizard,Expect,Dislike
+K104,Doctor identity card,Neutral,Dislike
+K104,Plain-language access log,Neutral,Neutral
+K104,Per-partner consent toggles,Like,Dislike
+K104,Care Moments (WhatsApp/SMS),Like,Neutral
+K104,Grievance with case ID,Expect,Dislike
+K104,Audio narration at kiosk,Neutral,Live with
+K104,Download / share my records (ABHA),Like,Live with
+K104,Trust status panel,Neutral,Dislike
+K104,Data deletion request,Like,Neutral
+K105,Multilingual consent wizard,Neutral,Dislike
+K105,Doctor identity card,Like,Dislike
+K105,Plain-language access log,Neutral,Live with
+K105,Per-partner consent toggles,Like,Neutral
+K105,Care Moments (WhatsApp/SMS),Expect,Dislike
+K105,Grievance with case ID,Expect,Expect
+K105,Audio narration at kiosk,Like,Neutral
+K105,Download / share my records (ABHA),Like,Dislike
+K105,Trust status panel,Neutral,Neutral
+K105,Data deletion request,Neutral,Neutral
+K106,Multilingual consent wizard,Expect,Dislike
+K106,Doctor identity card,Neutral,Expect
+K106,Plain-language access log,Neutral,Neutral
+K106,Per-partner consent toggles,Like,Dislike
+K106,Care Moments (WhatsApp/SMS),Like,Dislike
+K106,Grievance with case ID,Expect,Dislike
+K106,Audio narration at kiosk,Neutral,Neutral
+K106,Download / share my records (ABHA),Like,Dislike
+K106,Trust status panel,Live with,Neutral
+K106,Data deletion request,Neutral,Live with
+K107,Multilingual consent wizard,Expect,Live with
+K107,Doctor identity card,Like,Live with
+K107,Plain-language access log,Neutral,Neutral
+K107,Per-partner consent toggles,Expect,Dislike
+K107,Care Moments (WhatsApp/SMS),Expect,Dislike
+K107,Grievance with case ID,Expect,Dislike
+K107,Audio narration at kiosk,Like,Neutral
+K107,Download / share my records (ABHA),Like,Live with
+K107,Trust status panel,Neutral,Neutral
+K107,Data deletion request,Neutral,Neutral
+K108,Multilingual consent wizard,Expect,Dislike
+K108,Doctor identity card,Like,Dislike
+K108,Plain-language access log,Like,Neutral
+K108,Per-partner consent toggles,Dislike,Dislike
+K108,Care Moments (WhatsApp/SMS),Like,Neutral
+K108,Grievance with case ID,Like,Live with
+K108,Audio narration at kiosk,Like,Neutral
+K108,Download / share my records (ABHA),Like,Dislike
+K108,Trust status panel,Neutral,Neutral
+K108,Data deletion request,Like,Neutral
+K109,Multilingual consent wizard,Neutral,Dislike
+K109,Doctor identity card,Like,Dislike
+K109,Plain-language access log,Like,Neutral
+K109,Per-partner consent toggles,Like,Dislike
+K109,Care Moments (WhatsApp/SMS),Expect,Live with
+K109,Grievance with case ID,Expect,Neutral
+K109,Audio narration at kiosk,Like,Neutral
+K109,Download / share my records (ABHA),Expect,Expect
+K109,Trust status panel,Live with,Neutral
+K109,Data deletion request,Like,Live with
