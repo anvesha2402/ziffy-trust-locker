@@ -1,5 +1,9 @@
 # 🔐 My Health Data Locker — Digital Trust Toolkit
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/research_lab)
+
+**Live app:** https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/research_lab
+
 **A trust and visibility layer for India's connected e-clinic journey, plus the research, security, compliance and business tooling behind it.**
 
 Built from a WeSchool *Global Citizen Leadership* live project with **ZiffyHealth** (Pune) by **Team Anova**:
