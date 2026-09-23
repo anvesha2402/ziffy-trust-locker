@@ -74,7 +74,7 @@ Rather than publish unverifiable numbers, this repo:
 ## Run it
 
 ```bash
-git clone https://github.com/<you>/ziffy-trust-locker.git
+git clone https://github.com/Anvesha2402/ziffy-trust-locker.git
 cd ziffy-trust-locker
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
