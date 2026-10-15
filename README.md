@@ -1,103 +1,199 @@
-# 🔐 My Health Data Locker — Digital Trust Toolkit
+<div align="center">
 
-**A trust and visibility layer for India's connected e-clinic journey, plus the research, security, compliance and business tooling behind it.**
+# 🔐 My Health Data Locker
 
-Built from a WeSchool *Global Citizen Leadership* live project with **ZiffyHealth** (Pune) by **Team Anova**:
-Anvesha Singh (Project Lead), Aastha Vithlani, Ajinkya Upasani, Raj Girase, Shriraam Sundar and Yukti Agarwal.
-This repository is an independent, extended rebuild of the project for portfolio use.
+### A digital-trust toolkit for India's connected e-clinic journey
 
-> ⚠️ Concept prototype. Not affiliated with or endorsed by ZiffyHealth / Ziffytech Solutions Pvt Ltd.
-> Research findings come only from the project's **genuine survey** (112 responses, de-identified). A synthetic dataset
-> is included to demonstrate methods and is never used as evidence. Educational only: not legal or medical advice.
-> What changed and why: [Correction log](docs/CORRECTION_LOG.md).
+Research, a working prototype, security and compliance tooling, and a business case,
+built from a live project with **ZiffyHealth** (Pune).
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app)
+
+![Python](https://img.shields.io/badge/Python-3.11-0F6E8C?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-app-0F6E8C?logo=streamlit&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-31%20passing-2E7D5B)
+![Data](https://img.shields.io/badge/survey-112%20genuine%20responses-2E7D5B)
+![License](https://img.shields.io/badge/license-MIT-5B6B7A)
+
+**[Live app](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app)** ·
+[Research Lab](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/research_lab) ·
+[Locker prototype](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/locker) ·
+[Strategy & ESG](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/strategy) ·
+[ROI simulator](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/roi)
 
 ![Overview](assets/overview.png)
 
+</div>
+
 ---
 
-## The problem
+## At a glance
 
-ZiffyHealth connects an IoT e-clinic kiosk (6 vitals incl. ECG), tele-consultation, home diagnostics, pharmacy and a cloud EHR.
-The care works, but the patient can't see what happens to their data along the way:
-
-| Trust break | Patient's question |
+| | |
 |---|---|
-| **Before care**: vitals captured with no plain explanation | *"What are they taking from me?"* |
-| **Across hand-offs**: doctor → lab → pharmacy, no visible trail | *"Where did my data go?"* |
-| **After care**: no confirmation of report or prescription | *"Did any of this actually happen?"* |
+| **Client** | ZiffyHealth (Ziffytech Solutions Pvt Ltd), Pune: IoT e-clinic kiosk, tele-consultation, home diagnostics, pharmacy and a cloud health record |
+| **Team** | Team Anova, WeSchool PGDM 2025–27 (*Global Citizen Leadership* live project): Anvesha Singh (Project Lead), Aastha Vithlani, Ajinkya Upasani, Raj Girase, Shriraam Sundar, Yukti Agarwal |
+| **Problem** | Patients cannot see what happens to their health data as it moves from kiosk to doctor to lab to pharmacy |
+| **Solution** | A three-layer trust overlay on existing systems: explain and consent, track and control, reassure and resolve |
+| **Evidence** | 112 survey responses (74 platform users), analysed under a plan fixed before testing |
+| **Built** | An 8-page Streamlit app with a working consent policy engine, a hash-chained audit ledger and 31 automated tests |
 
-India's DPDP Rules (notified Nov 2025, most duties from **May 2027**) turn this into a regulatory deadline as well as a UX problem.
+> ⚠️ Independent portfolio rebuild of a student live project. Not affiliated with or endorsed by ZiffyHealth.
+> Educational only: not legal or medical advice. What changed and why: [Correction log](docs/CORRECTION_LOG.md).
 
-## The solution: three layers, one overlay
+---
 
-| Layer | Where | What it does |
+## Contents
+
+1. [The problem](#-the-problem)
+2. [What the survey shows](#-what-the-survey-shows)
+3. [The solution](#-the-solution)
+4. [What's in the app](#-whats-in-the-app)
+5. [How the Locker works](#-how-the-locker-works)
+6. [Business case](#-business-case)
+7. [Evidence status](#-evidence-status)
+8. [Run it locally](#-run-it-locally)
+9. [Repository layout](#-repository-layout)
+10. [Sources](#-sources)
+
+---
+
+## 🩺 The problem
+
+ZiffyHealth's care works. What breaks is what the patient **cannot see** while it happens.
+
+| Trust break | Where | The patient's question |
 |---|---|---|
-| **1 · Explain & Consent** | Kiosk, before vitals | 4-step multilingual wizard, doctor identity card, purpose-bound consent that expires (like the ABDM consent artefact) |
-| **2 · Track & Control** | Locker dashboard | Plain-language access log on a **hash-chained, tamper-evident ledger**. Per-partner toggles are **enforced by a policy engine before every read** |
-| **3 · Reassure & Resolve** | WhatsApp/SMS + app | PHI-free "Care Moments" notifications and grievance tickets with case IDs and a response deadline (SLA) |
+| **Before care** | Vitals captured at the kiosk with no plain explanation | *"What are they taking from me?"* |
+| **Across hand-offs** | Data moves doctor → lab → pharmacy with no visible trail | *"Where did my data go?"* |
+| **After care** | No confirmation of report, prescription or record | *"Did any of this actually happen?"* |
 
-## What's in the app (8 pages)
+**Why now:** India's DPDP Rules were notified in November 2025. Most duties apply from **13 May 2027**, with penalties
+of up to **₹250 crore** for inadequate security safeguards.
 
-| Page | Highlights |
+---
+
+## 📊 What the survey shows
+
+Team Anova's Google Form, 13–17 January 2026: **112 responses**, of which **74 had used a digital-health platform**.
+
+| Finding | Result |
 |---|---|
-| 🏠 Overview | Problem, solution, evidence notes |
-| 📊 **Research Lab** | **Primary survey (genuine, n = 112):** sample flow, item results, two-item reliability, factor structure, HTMT, pre-specified hypothesis tests, robustness and sensitivity checks, and a page on what the data can and cannot show. Also: a generic pipeline for any Google-Forms export, and a synthetic method demo |
-| 🎯 Kano Analyzer | Kano classifier (Better/Worse coefficients), shown on simulated responses. Illustrative until a real Kano survey is run |
-| 🔐 **Locker Prototype** | Working journey in English/हिंदी, live consent enforcement, blocked-access demo, grievances, DPO console with **ledger verification, external anchoring and three tamper demos** |
-| 🛡️ Security Architecture | Data-flow with trust boundaries, STRIDE threat model, CERT-In 6 h / DPB 72 h breach clock, PHI-safe notification checker |
-| ✅ DPDP Readiness | 26 controls (DPDP Act/Rules, CERT-In, ABDM) → radar chart before and after the Locker, plus a prioritised gap list. Educational self-assessment, not certification |
-| 💹 ROI Simulator | NPV, payback, tornado sensitivity, Monte Carlo. Every input is an assumption (no operating data); outputs are scenarios, not forecasts |
-| 🧭 Strategy & ESG | PESTEL, Five Forces, strategic groups, ERRC, Keller CBBE, McKinsey 7S, RICE, Balanced Scorecard, ESG materiality (SASB, GRI 418, BRSR P9, SDG 3) |
+| **Gaps in current practice** | Only **38%** agree their platform protects their data from misuse; **38%** that it would take responsibility if data were misused; **47%** that it is transparent about who can access their data |
+| **H1–H4 (associations)** | Favourable views of transparency (ρ = 0.46), consent (0.49), governance & accountability (0.75) and communication (0.66) each go with higher trust-based intention to keep using a platform (all Holm-adjusted p < .001) |
+| **Strongest unique link** | With all four in one model (R² = 0.50), only **governance & accountability** keeps a clear association (β = 0.50, 95% CI 0.14–0.84); robust to removing suspect responses and to an ordinal model |
+| **Not testable** | Trust → continued use (H5) and mediation: the form had no separate trust or intention measure |
 
-| Locker: completed journey, blocked insurer | Research Lab: pre-specified hypothesis tests (genuine data) |
+<details>
+<summary><b>What these results can and cannot show</b></summary>
+
+- **Associations, not effects.** One-time, self-reported survey; no causal claim.
+- **Proxy outcome.** Q14 ("Because I trust the platform, I intend to continue using it") mixes trust and intention.
+- **Constructs overlap.** One factor explains 54% of the answers; governance and communication are not distinguishable (HTMT 1.07).
+- **Sample.** Convenience sample, mostly aged 18–35; location, language and kiosk use were not asked. Results describe digital-health platforms in general, not ZiffyHealth or its e-clinic patients.
+- **Next step.** A follow-up instrument with direct trust and intention scales is in [`docs/primary/FOLLOW_UP_RESEARCH.md`](docs/primary/FOLLOW_UP_RESEARCH.md).
+
+Plan: [`ANALYSIS_PLAN.md`](docs/primary/ANALYSIS_PLAN.md) · Full output: [`RESULTS_PRIMARY.md`](docs/primary/RESULTS_PRIMARY.md) · Reproduce: `python scripts/primary_analysis.py`
+</details>
+
+<p align="center"><img src="assets/research_primary_hypotheses.png" width="85%" alt="Research Lab: hypothesis tests on the genuine survey"></p>
+
+---
+
+## 💡 The solution
+
+**My Health Data Locker** is an overlay, not a new platform. Every screen reads from an event ZiffyHealth already produces.
+
+| Layer | Delivered at | What it does | Patient outcome |
+|---|---|---|---|
+| **1 · Explain & Consent** | Kiosk, before vitals | 4-step multilingual consent wizard, doctor identity card, purpose-bound consent that expires (ABDM-style) | *"I know what's happening. I chose to agree."* |
+| **2 · Track & Control** | Locker dashboard | Plain-language access log on a tamper-evident ledger; per-partner switches enforced **before** every read | *"I can see where my data went."* |
+| **3 · Reassure & Resolve** | WhatsApp / SMS / app | Status messages that never reveal health details; complaints with a case ID and a deadline | *"If something's wrong, I can act."* |
+
+The survey points the design toward **visible accountability first**: a named owner, a tracked complaint and an access log.
+
+---
+
+## 🧰 What's in the app
+
+| Page | What you can do |
 |---|---|
-| ![Locker](assets/locker_dashboard.png) | ![Hypotheses](assets/research_primary_hypotheses.png) |
-| **Consent wizard (step 3)** | **ROI simulator** |
-| ![Consent](assets/locker_consent.png) | ![ROI](assets/roi.png) |
+| 🏠 [**Overview**](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app) | Problem, solution and what is measured vs assumed |
+| 📊 [**Research Lab**](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/research_lab) | Genuine survey analysis: sample, item results, reliability, factor structure, HTMT, hypothesis tests, robustness. Also analyses any Google-Forms export you upload |
+| 🎯 [**Kano Analyzer**](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/kano) | Kano classification tool, ready for a real feature survey (shown on simulated data) |
+| 🔐 [**Locker Prototype**](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/locker) | Walk through a patient visit in English or हिंदी; try partner requests that get blocked; tamper with the audit log as an insider and watch it get caught |
+| 🛡️ [**Security Architecture**](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/security) | Data flow and trust boundaries, STRIDE threat model, breach clock (CERT-In 6 h, DPB 72 h), notification checker |
+| ✅ [**DPDP Readiness**](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/dpdp) | Score 26 controls from the DPDP Act and Rules, CERT-In and ABDM; see which gaps the Locker closes |
+| 💹 [**ROI Simulator**](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/roi) | Change every assumption; see NPV, payback, sensitivity and a Monte Carlo spread |
+| 🧭 [**Strategy & ESG**](https://ziffy-trust-locker-dwgjpkayxh5jiupr7fmvso.streamlit.app/strategy) | PESTEL, Five Forces, ERRC, CBBE, McKinsey 7S, RICE, Balanced Scorecard, ESG materiality |
 
-## What the survey shows (genuine data)
+<table>
+<tr>
+<td width="50%"><img src="assets/locker_consent.png" alt="Consent wizard"><br><sub><b>Layer 1</b>: consent wizard, step 3</sub></td>
+<td width="50%"><img src="assets/locker_dashboard.png" alt="Locker dashboard"><br><sub><b>Layers 2–3</b>: completed visit; insurer request blocked</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="assets/security.png" alt="Security architecture"><br><sub><b>Security</b>: data flow and trust boundaries</sub></td>
+<td width="50%"><img src="assets/dpdp.png" alt="DPDP readiness"><br><sub><b>Compliance</b>: DPDP readiness before and with the Locker</sub></td>
+</tr>
+</table>
 
-Team Anova's Google Form, 13–17 January 2026: 112 responses, of which **74 had used a digital-healthcare platform**
-and form the analytic sample. Plan: [`ANALYSIS_PLAN.md`](docs/primary/ANALYSIS_PLAN.md) (fixed before testing) ·
-full output: [`RESULTS_PRIMARY.md`](docs/primary/RESULTS_PRIMARY.md) · reproduce: `python scripts/primary_analysis.py`.
+---
 
-- **Gaps.** Only 38% of users agree their platform has strong measures to protect their data (Q10) or would take
-  responsibility if it were misused (Q11). 47% agree it is transparent about who can access their data (Q7).
-- **Associations (H1–H4).** Favourable views of transparency (ρ = 0.46), consent (0.49), governance & accountability
-  (0.75) and communication (0.66) are each associated with trust-based intention to keep using the platform
-  (single item Q14; all Holm-adjusted p < .001).
-- **Unique association.** With all four in one model (R² = 0.50), only **governance & accountability** keeps a clear
-  unique association (standardised β = 0.50, 95% CI 0.14–0.84). This holds without straight-liners, without duplicate
-  patterns and in an ordinal model.
-- **What it cannot show.** The form has no separate trust measure, so trust → usage (H5) and mediation are **not
-  testable**. The ten items share one dominant factor, so the four drivers are not empirically distinct. The sample is
-  young, convenience-recruited and did not record location, language or kiosk use. Results are associations, not
-  effects, and concern digital-health platforms in general, not ZiffyHealth.
-- **Design implication (provisional).** Visible accountability (who is responsible, what happens on misuse, a
-  tracked complaint) has the strongest support; the Locker's Layer 3 and access log address it. Pilot evidence is
-  still needed: see [`FOLLOW_UP_RESEARCH.md`](docs/primary/FOLLOW_UP_RESEARCH.md).
+## ⚙️ How the Locker works
 
-**Business case.** Every ROI input is a planning assumption; no ZiffyHealth operating data was available. Under the
-default assumptions a 10-clinic pilot alone does not repay the build, and call deflection is the most sensitive
-driver, so the pilot has to measure it.
+```mermaid
+flowchart LR
+    K[Kiosk / patient app] -->|request| PE{Policy engine}
+    P[Doctor · Lab · Pharmacy · Insurer] -->|read request| PE
+    PE -->|consent + purpose + data type + expiry OK| EHR[(Health record)]
+    PE -->|every allow and deny| L[(Hash-chained ledger)]
+    L -->|plain-language sentences| AL[Patient access log]
+    L -->|verify against anchor| DPO[DPO console]
+    EHR -->|event| CM[Care Moments: no health details]
+    K -->|complaint| G[Grievance: case ID + deadline]
+```
 
-## Evidence status
+- **Policy engine:** a partner gets data only if consent is granted, the declared purpose matches, the data type is in scope and consent has not expired.
+- **Audit ledger:** each entry stores the SHA-256 hash of the previous one, so editing any past entry breaks the chain. An external anchor (entry count and latest hash kept outside the database) also catches deleted or rewritten entries. No log can prove that an unlogged access never happened, so production would enforce the checks at the API gateway.
+- **Scope:** the prototype runs on a simulated patient, simulated partners and simulated events. It is not connected to ZiffyHealth systems.
+
+---
+
+## 💹 Business case
+
+Two levers: fewer *"where is my report?"* calls, and more repeat visits. **Every input is a planning assumption**
+(no ZiffyHealth operating data was available), so these are scenarios, not forecasts.
+
+| Scenario (36 months, 14% discount rate) | NPV | Payback |
+|---|---|---|
+| Pilot only, 10 clinics | −₹11.6 lakh | Not within 36 months |
+| Pilot + 40 clinics from month 13 | ₹7.0 lakh | Month 27 |
+
+Call deflection is the most sensitive assumption. The pilot is therefore designed as a measurement exercise:
+scale only if, against matched control clinics, call deflection reaches **28%** and repeat visits rise by **1.8 percentage points**.
+
+<p align="center"><img src="assets/roi.png" width="85%" alt="ROI simulator"></p>
+
+---
+
+## 🧾 Evidence status
 
 | Material | Status |
 |---|---|
-| Primary survey results | Measured (genuine, n = 74 users) |
-| Market and regulatory context | Published sources, cited |
-| Frameworks (PESTEL, 7S, CBBE, RICE, ESG) | Team judgement |
-| ROI, NPV, Monte Carlo | Simulation on assumptions |
-| Kano categories, synthetic survey results | Simulated: method illustration only |
-| Locker prototype | Implemented and tested in-app; simulated users and partners |
+| Survey results | **Measured**: genuine responses, n = 74 users |
+| Market and regulatory context | **Published sources**, cited below |
+| Frameworks (PESTEL, 7S, CBBE, RICE, ESG) | **Team judgement** |
+| ROI, NPV, Monte Carlo | **Simulation** on stated assumptions |
+| Kano categories, synthetic survey demo | **Simulated**: method illustration only |
+| Locker prototype | **Implemented and tested** in-app, with simulated users and partners |
 
 Registers: [Evidence](docs/EVIDENCE_REGISTER.md) · [Limitations](docs/LIMITATIONS_REGISTER.md) ·
-[Data cards](docs/DATA_CARD.md) · [Corrections](docs/CORRECTION_LOG.md).
-A 222-response file from a different project's survey was once associated with this project in error. It is
-excluded entirely and is not in this repository.
+[Data cards](docs/DATA_CARD.md) · [Corrections](docs/CORRECTION_LOG.md)
 
-## Run it
+---
+
+## 🚀 Run it locally
 
 ```bash
 git clone https://github.com/anvesha2402/ziffy-trust-locker.git
@@ -105,35 +201,45 @@ cd ziffy-trust-locker
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 streamlit run app.py
-pytest -q                                          # unit, data-integrity and page tests
+pytest -q                                           # 31 tests
 ```
 
-Deploy for free on Streamlit Community Cloud: see [docs/DEPLOY.md](docs/DEPLOY.md).
+Free deployment on Streamlit Community Cloud: see [docs/DEPLOY.md](docs/DEPLOY.md).
 
-## Repository layout
+---
+
+## 🗂️ Repository layout
+
+<details>
+<summary>Show the folder structure</summary>
 
 ```
-app.py                  navigation (st.navigation, 8 pages)
+app.py                  navigation (8 pages)
 app_pages/              one file per page (UI only)
 core/
   primary.py            genuine survey: de-identification, coding, pre-specified analysis
-  pipeline.py           generic export → cleaned → audited → modelled (any Google-Forms file)
-  quality.py            data-quality audit + exclusion flow
-  stats.py              α, correlations, OLS + VIF, bootstrap mediation, hypotheses
   locker.py             consent store, policy engine, hash-chained ledger, grievances, PHI checker
   dpdp.py               26-control readiness model
-  roi.py                cash-flow, NPV, tornado, Monte Carlo
-  kano.py               Kano classification + CS coefficients
-  sample_data.py        synthetic demo survey + Kano generator (method illustration only)
+  roi.py                cash flow, NPV, tornado, Monte Carlo
+  kano.py               Kano classification
+  pipeline.py           generic Google-Forms export → cleaned → audited → modelled
+  quality.py, stats.py  data-quality audit and statistics for the generic pipeline
+  sample_data.py        synthetic demo data generator (method illustration only)
 data/primary/           de-identified genuine survey + follow-up instrument
 data/                   synthetic demo datasets (file names end in _SYNTHETIC)
-outputs/primary/        every published primary-survey number (CSV + results.json)
-scripts/                primary_analysis.py (genuine data) · run_analysis.py (generic / synthetic)
-docs/                   analysis plan, results, data cards, evidence / limitations registers, correction log
-tests/                  unit + page smoke + click-through tests
+outputs/primary/        every published survey number (CSV + results.json)
+scripts/                primary_analysis.py (genuine data) · run_analysis.py (generic)
+docs/                   analysis plan, results, data cards, registers, correction log, follow-up research
+tests/                  unit, data-integrity, page and click-through tests
 ```
+</details>
 
-## Sources
+---
+
+## 📚 Sources
+
+<details>
+<summary>Show sources</summary>
 
 - ZiffyHealth: ziffytech.com (About, E-clinic pages); CB Insights company profile
 - ABDM statistics: Digital Health News, 12 Aug 2026 · eSanjeevani: Digital Health News, 30 Jan 2026
@@ -142,6 +248,11 @@ tests/                  unit + page smoke + click-through tests
 - Market: IMARC India Digital Health (USD 19.1 bn 2025 → 90 bn 2034); Grand View Research India Telehealth
 - PwC *Voice of the Consumer* 2024 (India): 82% cite data protection as the top trust factor
 - Breaches: AIIMS Delhi (2022), ICMR-linked leak (2023), Star Health (2024, TechRadar)
-- Kano et al. (1984); Berger et al. (1993); Keller (1993) CBBE; Eisinga et al. (2013) two-item reliability; Henseler et al. (2015) HTMT; Horn (1965) parallel analysis; Holm (1979); Long & Ervin (2000) HC3
+- Methods: Eisinga et al. (2013) two-item reliability; Horn (1965) parallel analysis; Henseler et al. (2015) HTMT; Holm (1979); Long & Ervin (2000) HC3; Kano et al. (1984); Berger et al. (1993); Keller (1993) CBBE; Venkatesh et al. (2003) UTAUT
+</details>
 
-MIT licence · © 2026 Anvesha Singh & Team Anova
+---
+
+<div align="center">
+<sub>MIT licence · © 2026 Anvesha Singh & Team Anova · Built with Python, Streamlit, SQLite and Plotly</sub>
+</div>
