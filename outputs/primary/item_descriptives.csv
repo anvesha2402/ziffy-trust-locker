@@ -1,0 +1,11 @@
+Item,Statement,Mean,SD,% Agree (4–5),% Neutral,% Disagree (1–2),Export format
+Q6,I clearly understand how my health data is collected and used by the digital healthcare platform.,3.5405405405405403,0.8470608198828026,60.810810810810814,28.37837837837838,10.81081081081081,text
+Q7,The platform is transparent about who can access my health data and when it is shared.,3.2432432432432434,0.9335572094466869,47.2972972972973,24.324324324324326,28.37837837837838,text
+Q8,The consent process allows me to clearly choose what type of health data I want to share.,3.472972972972973,0.8793361906835377,56.75675675675676,25.675675675675674,17.56756756756757,text
+Q9,I feel confident using the platform because I can easily withdraw or modify my consent at any time.,3.4054054054054053,0.8901118741279277,52.702702702702695,29.72972972972973,17.56756756756757,text
+Q10,I believe the platform has strong measures in place to protect my health data from misuse.,3.135135135135135,1.089480513688756,37.83783783783784,33.78378378378378,28.37837837837838,numeric 1–5
+Q11,I trust that the platform would take responsibility and address issues if my data were misused.,3.1486486486486487,0.9316715341062547,37.83783783783784,36.486486486486484,25.675675675675674,text
+Q12,The platform communicates clearly and in a timely manner about matters related to my health data.,3.364864864864865,1.0672500101794629,50.0,27.027027027027028,22.972972972972975,numeric 1–5
+Q13,The platform's communication makes me feel informed and reassured about my data and services.,3.5135135135135136,0.7806432760694334,52.702702702702695,37.83783783783784,9.45945945945946,text
+Q14,"Because I trust the platform, I intend to continue using it for my healthcare needs.",3.3513513513513513,1.0908389687222768,50.0,27.027027027027028,22.972972972972975,numeric 1–5
+Q15,My level of trust strongly influences my decision to keep using a digital healthcare platform.,3.77027027027027,1.0006476984255295,63.51351351351351,27.027027027027028,9.45945945945946,numeric 1–5

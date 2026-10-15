@@ -6,8 +6,13 @@ from core import dpdp, ui
 ui.setup("DPDP Readiness Assessor", "Decision tool · compliance",
          "Score 26 controls drawn from the DPDP Act 2023, DPDP Rules 2025, CERT-In Directions and ABDM. "
          "See the overall readiness, the priority gaps, and how much the Locker closes on its own.")
-st.caption("Timeline: Rules notified Nov 2025 · consent-manager provisions from 13 Nov 2026 · most obligations "
-           "from 13 May 2027. Educational tool — not legal advice.")
+st.caption("Timeline as notified: Rules published 13/14 Nov 2025 · consent-manager provisions from 13 Nov 2026 · "
+           "most substantive duties from 13 May 2027. A 2026 MeitY proposal to shorten the transition had not been "
+           "notified in the sources reviewed (Oct 2026); check the current Gazette before relying on any date.")
+st.warning("**Educational self-assessment, not legal advice and not a certification.** The control list is the "
+           "team's reading of the Act, Rules, CERT-In Directions and ABDM guidance. A score here does not mean an "
+           "organisation is compliant. \"With the Locker\" assumes each mapped control is fully implemented in "
+           "production, which the prototype does not do.", icon="⚖️")
 
 df = dpdp.controls_df()
 preset = st.radio("Start from", ["All 'Partial' (typical early-stage)", "All 'Not in place'", "Blank — I'll score"],
@@ -29,7 +34,7 @@ with_l = dpdp.score(levels, with_locker=True)
 o1, o2 = dpdp.overall(now), dpdp.overall(with_l)
 m1, m2, m3 = st.columns(3)
 m1.metric("Readiness today", f"{o1:.0f}%", dpdp.readiness_band(o1), delta_color="off")
-m2.metric("With the Locker", f"{o2:.0f}%", f"+{o2 - o1:.0f} pts")
+m2.metric("With the Locker (if fully built)", f"{o2:.0f}%", f"+{o2 - o1:.0f} pts")
 m3.metric("Open gaps", int((now["Level"] < 2).sum()))
 
 d1, d2 = dpdp.domain_scores(now), dpdp.domain_scores(with_l)

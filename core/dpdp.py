@@ -1,10 +1,11 @@
 """DPDP readiness self-assessment.
 
 Controls are drawn from the Digital Personal Data Protection Act, 2023, the
-DPDP Rules, 2025 (notified Nov 2025; most obligations apply from May 2027),
+DPDP Rules, 2025 (notified Nov 2025; most obligations apply from 13 May 2027
+as notified; a 2026 proposal to shorten this was not notified when checked),
 the CERT-In Directions (April 2022) and the ABDM consent framework.
 
-Educational tool, not legal advice. References are to the section / rule that
+Educational tool, not legal advice and not a certification of compliance. References are to the section / rule that
 motivates each control; qualified counsel / a DPO must confirm applicability.
 """
 from __future__ import annotations
@@ -31,8 +32,9 @@ CONTROLS = [
      "DPDP s.12", 2, "L3"),
     ("R3", "Data Principal Rights", "Nomination of another person to exercise rights (death / incapacity)",
      "DPDP s.14", 1, None),
-    ("R4", "Data Principal Rights", "Grievance mechanism with case ID and response inside the prescribed period (max 90 days)",
-     "DPDP s.13; Rules", 3, "L3"),
+    ("R4", "Data Principal Rights", "Grievance mechanism with case ID; grievances answered within the period the "
+     "fiduciary publishes, which may not exceed 90 days",
+     "DPDP s.13; Rule 14(3)", 3, "L3"),
     ("S1", "Security Safeguards", "Encryption of health data at rest and in transit; masking / tokenisation of identifiers",
      "DPDP s.8(5); Rule 6", 3, None),
     ("S2", "Security Safeguards", "Role-based access control; least privilege for clinic operators and partners",

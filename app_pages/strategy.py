@@ -10,6 +10,9 @@ ui.setup("Strategy & ESG", "Case · frameworks tied to decisions",
          "can win (strategic groups, ERRC), what to build first (RICE), how trust becomes brand equity (CBBE), "
          "whether the organisation can deliver (7S), how to measure it (Balanced Scorecard) and why it is "
          "material to ESG.")
+st.info("**Evidence basis:** every framework on this page is a qualitative team judgement from public sources and "
+        "the project brief. None of the scores were validated with ZiffyHealth leadership or measured in the field; "
+        "where the primary survey bears on a point it is cited in the Research Lab, not here.", icon="🧭")
 
 tabs = st.tabs(["PESTEL", "Five Forces", "Positioning & ERRC", "CBBE", "McKinsey 7S", "RICE", "Scorecard", "ESG"])
 
@@ -101,6 +104,8 @@ with tabs[4]:
 
 with tabs[5]:
     st.markdown("#### RICE prioritisation (edit any cell)")
+    st.caption("Reach, impact, confidence and effort are team estimates, not measured values: no patient-volume, "
+               "usage or engineering-effort data were available. Treat the ranking as a discussion starting point.")
     rice = pd.DataFrame([
         ("Multilingual consent wizard", 3000, 3, .8, 3), ("Doctor identity card", 3000, 2, .9, 1),
         ("Plain-language access log", 2000, 2, .7, 3), ("Per-partner consent toggles", 1500, 2, .7, 4),
@@ -113,13 +118,14 @@ with tabs[5]:
     st.plotly_chart(ui.plotly_layout(px.bar(ed, x="RICE", y="Feature", orientation="h",
                                             color_discrete_sequence=[ui.PRIMARY]).update_layout(
         yaxis=dict(categoryorder="total ascending")), 340))
-    st.caption("Cross-check with the Kano Analyzer: Must-be features ship regardless of RICE rank.")
+    st.caption("Once a real Kano survey is run, Must-be features ship regardless of RICE rank. The current Kano page "
+               "uses simulated responses, so it cannot yet override this ranking.")
 
 with tabs[6]:
     ui.table(pd.DataFrame([
-        ("Financial", "Support cost per patient", "−30 % vs control clinics", "Call logs"),
-        ("Financial", "90-day repeat-visit rate", "+3 pp vs control", "EHR visit data"),
-        ("Customer", "Digital trust score (TRU scale)", "+0.3 on 5-pt scale", "Exit survey"),
+        ("Financial", "Support cost per patient", "Assumed −30 % vs control (to test)", "Call logs"),
+        ("Financial", "90-day repeat-visit rate", "Assumed +3 pp vs control (to test)", "EHR visit data"),
+        ("Customer", "Digital trust (direct multi-item scale, follow-up instrument)", "Target set after baseline", "Exit survey"),
         ("Customer", "Consent completion at kiosk", "≥ 95 % in ≤ 3 min", "Wizard analytics"),
         ("Internal process", "Grievances resolved within SLA", "≥ 90 % in 30 days", "Grievance system"),
         ("Internal process", "Ledger integrity checks passed", "100 % daily", "DPO console"),

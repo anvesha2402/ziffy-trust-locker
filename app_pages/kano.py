@@ -7,11 +7,15 @@ import streamlit as st
 from core import kano, ui
 
 DATA = Path(__file__).resolve().parents[1] / "data"
-ui.setup("Kano Analyzer", "Evidence · feature prioritisation",
-         "Which Locker features must ship in the pilot, and which are delighters? Each respondent answers a "
-         "functional (“if the Locker had X…”) and dysfunctional (“if it did not…”) question per feature.")
+ui.setup("Kano Analyzer", "Method tool · feature prioritisation (illustrative)",
+         "A ready-to-use Kano classifier for the follow-up study. Each respondent answers a functional "
+         "(“if the Locker had X…”) and a dysfunctional (“if it did not…”) question per feature.")
+st.error("**No Kano survey was run in this project.** The bundled 110 responses are simulated, so the categories "
+         "and roadmap below show how the method works, not which features patients want. Feature priority in the "
+         "project rests on the primary survey's gaps and on team judgement until a real Kano study is fielded "
+         "(question template at the bottom of this page).", icon="⚠️")
 
-src = st.radio("Data", ["Synthetic demo (110 respondents)", "Upload CSV"], horizontal=True)
+src = st.radio("Data", ["Synthetic demo (110 simulated respondents, illustrative)", "Upload CSV"], horizontal=True)
 if src.startswith("Synthetic"):
     df = pd.read_csv(DATA / "kano_responses_SYNTHETIC.csv")
     ui.synthetic_banner()
@@ -33,7 +37,7 @@ fig.update_traces(textposition="top center")
 fig.update_layout(xaxis_range=[0, 1], yaxis_range=[0, 1])
 st.plotly_chart(ui.plotly_layout(fig, 520))
 
-st.subheader("Roadmap implied")
+st.subheader("Roadmap implied by the data shown" + (" (illustrative: simulated)" if src.startswith("Synthetic") else ""))
 g = kano.mvp_recommendation(res)
 cols = st.columns(4)
 for c, (k, v) in zip(cols, g.items()):

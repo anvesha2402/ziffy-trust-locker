@@ -53,9 +53,10 @@ def pill(status: str, text: str | None = None) -> str:
 
 
 def synthetic_banner() -> None:
-    st.info("**Synthetic demo data.** The bundled survey is simulated from a documented model "
-            "(see `core/sample_data.py`). It mirrors the Team Anova questionnaire but contains no real "
-            "respondents. Upload your own Google-Forms export to analyse real data.", icon="🧪")
+    st.warning("**Synthetic demo data: method illustration only, not findings.** These responses are simulated "
+               "from a documented model (see `core/sample_data.py`). They contain no real respondents and must not "
+               "be quoted as evidence about patients, ZiffyHealth or the market. The project's genuine survey "
+               "results are in the Research Lab (\"Primary survey\").", icon="🧪")
 
 
 def footer() -> None:

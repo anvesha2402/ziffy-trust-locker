@@ -1,4 +1,6 @@
-# Results — synthetic_survey_v2_SYNTHETIC.csv
+# Pipeline output — synthetic_survey_v2_SYNTHETIC.csv
+
+> **Method illustration on simulated data, not findings.** Every number below describes a simulation with a known generating model (`core/sample_data.py`). None of it may be cited as evidence about patients, ZiffyHealth or the market. Genuine survey results: `docs/primary/RESULTS_PRIMARY.md`.
 
 ## Cleaning flow
 
@@ -120,5 +122,5 @@
 
 ## Business case (default assumptions)
 
-- Pilot+scale: NPV ₹7.0 L, payback month 27, gain/cost 1.27×, break-even uplift 1.8 pp, P(NPV>0)=53%
+- Pilot+scale: NPV ₹7.0 L, payback month 27, gain/cost 1.27×, break-even uplift 1.8 pp, share of simulated runs with NPV > 0 = 53% (assumed ranges)
 - Pilot only: NPV ₹-11.6 L, payback None, gain/cost 0.61×

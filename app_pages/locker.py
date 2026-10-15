@@ -7,6 +7,10 @@ from core import ui
 ui.setup("Locker Prototype", "Solution · working prototype",
          "Walk through Rajesh's e-clinic visit. Every data access is checked against his consent "
          "before it happens, and every attempt — allowed or blocked — is written to a tamper-evident ledger.")
+st.info("**Simulated prototype.** Rajesh, the partners and every event are fictional, and the database lives only in "
+        "this browser session. The policy engine and ledger really run here, but they are not connected to "
+        "ZiffyHealth systems, have not been usability-tested with patients, and enforce consent only inside "
+        "this app; a production system would need the checks at the API gateway of every partner.", icon="🧪")
 
 if "locker" not in st.session_state:
     st.session_state.locker = LK.Locker()
@@ -19,6 +23,7 @@ with st.sidebar:
     if st.button("↺ Reset demo"):
         st.session_state.locker = LK.Locker()
         st.session_state.pop("wiz", None)
+        st.session_state.pop("anchor", None)
         st.rerun()
 HI = lang == "हिंदी"
 T = (lambda en, hi: hi if HI else en)
@@ -147,22 +152,47 @@ elif role == "Care partners":
 # ------------------------------------------------------------------ DPO
 else:
     st.subheader("DPO console")
+    anc = st.session_state.get("anchor")
     ok, bad = L.verify_chain()
-    if ok:
-        st.success(f"Ledger integrity verified — {len(L.ledger())} entries, hash chain intact.")
+    ok_a, bad_a = L.verify_chain(anchor=anc) if anc else (ok, bad)
+    if ok and ok_a:
+        st.success(f"Ledger integrity verified: {len(L.ledger())} entr{'y' if len(L.ledger()) == 1 else 'ies'}, hash chain intact"
+                   + (f", consistent with the anchor taken at {anc['ts'][11:19]} ({anc['count']} entries)." if anc
+                      else ". No external anchor yet, so deletion of the newest entries or a full recomputation "
+                           "would not be detected."))
+    elif not ok:
+        st.error(f"Ledger TAMPERING DETECTED at entry #{bad}: the stored hash no longer matches. Every later entry "
+                 "is untrusted; trigger incident response (CERT-In 6 h / DPB 72 h clock).")
     else:
-        st.error(f"Ledger TAMPERING DETECTED at entry #{bad}. Every later entry is now untrusted; "
-                 "trigger incident response (CERT-In 6 h / DPB 72 h clock).")
+        st.error(f"Chain is internally consistent, but it no longer matches the external anchor (problem from entry "
+                 f"#{bad_a}). Entries were deleted or the chain was recomputed after an edit.")
+    with st.expander("Ledger guarantees and limits", expanded=False):
+        st.markdown("- **Detects without an anchor:** an edit to any stored entry.\n"
+                    "- **Needs an external anchor to detect:** deletion of the newest entries, and an edit followed by "
+                    "recomputation of every later hash. Production would write the head hash to write-once storage "
+                    "or a third party on a schedule.\n"
+                    "- **Never detects:** an access that bypasses the policy engine and is never logged. Completeness "
+                    "depends on every partner call going through the gateway.")
     led = pd.DataFrame(L.ledger())
     if not led.empty:
         st.dataframe(led[["seq", "ts", "actor_role", "action", "resource", "purpose", "outcome", "detail",
                           "prev_hash", "hash"]], hide_index=True, height=320)
         c1, c2 = st.columns(2)
         with c1:
-            st.markdown("**Tamper demo** — edit a past row as a malicious insider would (direct DB write).")
+            st.markdown("**Tamper demos** (simulated malicious insider with direct database access)")
             seq = st.number_input("Entry #", 1, int(led["seq"].max()), 1)
-            if st.button("Tamper with entry"):
+            b1, b2, b3, b4 = st.columns(4)
+            if b1.button("Anchor head", help="Store count + head hash outside the database"):
+                st.session_state.anchor = L.anchor()
+                st.rerun()
+            if b2.button("Edit entry"):
                 L.tamper(int(seq))
+                st.rerun()
+            if b3.button("Delete newest"):
+                L.truncate_last()
+                st.rerun()
+            if b4.button("Edit + rehash"):
+                L.rewrite_from(int(seq))
                 st.rerun()
         with c2:
             st.download_button("Export audit log (CSV)", led.to_csv(index=False).encode(), "audit_log.csv")

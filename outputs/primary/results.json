@@ -1,0 +1,269 @@
+{
+  "raw_sha256": "d681ca838d795e3f3166579e97385f1bb3b96349626919ad6a69a9a38b445230",
+  "n": {
+    "A": 74,
+    "S1": 112,
+    "S2": 69,
+    "S3": 70
+  },
+  "kmo": {
+    "KMO": 0.8645445985063333,
+    "Bartlett chi2": 391.2393115629001,
+    "df": 45,
+    "p": 9.594101549443721e-57
+  },
+  "harman_first_factor_share": 0.5377731816262296,
+  "components_retained": 1,
+  "reliability": {
+    "TRN": {
+      "Inter-item r": 0.559,
+      "Spearman-Brown": 0.7171,
+      "Cronbach \u03b1": 0.715
+    },
+    "CON": {
+      "Inter-item r": 0.6617,
+      "Spearman-Brown": 0.7964,
+      "Cronbach \u03b1": 0.7964
+    },
+    "GOV": {
+      "Inter-item r": 0.6952,
+      "Spearman-Brown": 0.8202,
+      "Cronbach \u03b1": 0.8143
+    },
+    "COM": {
+      "Inter-item r": 0.5119,
+      "Spearman-Brown": 0.6772,
+      "Cronbach \u03b1": 0.6558
+    }
+  },
+  "htmt_max": 1.0655915711127566,
+  "hyp": {
+    "H1": {
+      "Spearman \u03c1": 0.4562,
+      "CI low": 0.237,
+      "CI high": 0.6456,
+      "p (Holm)": 0.0,
+      "Decision": "Supported (association with TBCI proxy)"
+    },
+    "H2": {
+      "Spearman \u03c1": 0.4848,
+      "CI low": 0.252,
+      "CI high": 0.6811,
+      "p (Holm)": 0.0,
+      "Decision": "Supported (association with TBCI proxy)"
+    },
+    "H3": {
+      "Spearman \u03c1": 0.7494,
+      "CI low": 0.5952,
+      "CI high": 0.8634,
+      "p (Holm)": 0.0,
+      "Decision": "Supported (association with TBCI proxy)"
+    },
+    "H4": {
+      "Spearman \u03c1": 0.6558,
+      "CI low": 0.4657,
+      "CI high": 0.8028,
+      "p (Holm)": 0.0,
+      "Decision": "Supported (association with TBCI proxy)"
+    }
+  },
+  "ols": {
+    "n": 74,
+    "r2": 0.5022,
+    "adj_r2": 0.4733,
+    "f_p": 2.2719143042480955e-08,
+    "table": {
+      "TRN": {
+        "\u03b2 (std.)": 0.1128,
+        "\u03b2 CI low": -0.1432,
+        "\u03b2 CI high": 0.3486,
+        "p": 0.4383,
+        "VIF": 1.5811
+      },
+      "CON": {
+        "\u03b2 (std.)": -0.0189,
+        "\u03b2 CI low": -0.3118,
+        "\u03b2 CI high": 0.3044,
+        "p": 0.9155,
+        "VIF": 2.0781
+      },
+      "GOV": {
+        "\u03b2 (std.)": 0.4961,
+        "\u03b2 CI low": 0.1368,
+        "\u03b2 CI high": 0.8391,
+        "p": 0.0144,
+        "VIF": 3.37
+      },
+      "COM": {
+        "\u03b2 (std.)": 0.1887,
+        "\u03b2 CI low": -0.1002,
+        "\u03b2 CI high": 0.5261,
+        "p": 0.257,
+        "VIF": 2.7663
+      }
+    }
+  },
+  "ordinal": {
+    "TRN": {
+      "Odds ratio": 1.4381,
+      "p": 0.3287
+    },
+    "CON": {
+      "Odds ratio": 0.8209,
+      "p": 0.6477
+    },
+    "GOV": {
+      "Odds ratio": 5.8688,
+      "p": 0.0005
+    },
+    "COM": {
+      "Odds ratio": 2.4352,
+      "p": 0.0648
+    }
+  },
+  "q14_q15_spearman": [
+    0.4857,
+    0.2321,
+    0.6994
+  ],
+  "power": {
+    "n": 74,
+    "min f2 (4-predictor model)": 0.1727,
+    "min R2 equivalent": 0.1473,
+    "min f2 (single predictor, unique)": 0.1137
+  },
+  "sensitivity": {
+    "S1": {
+      "n": 112,
+      "hyp": {
+        "H1": {
+          "Spearman \u03c1": 0.402,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H2": {
+          "Spearman \u03c1": 0.4269,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H3": {
+          "Spearman \u03c1": 0.7094,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H4": {
+          "Spearman \u03c1": 0.65,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        }
+      },
+      "ols_r2": 0.4983,
+      "ols": {
+        "TRN": {
+          "\u03b2 (std.)": 0.0896,
+          "p": 0.3946
+        },
+        "CON": {
+          "\u03b2 (std.)": -0.0786,
+          "p": 0.5358
+        },
+        "GOV": {
+          "\u03b2 (std.)": 0.4063,
+          "p": 0.0014
+        },
+        "COM": {
+          "\u03b2 (std.)": 0.345,
+          "p": 0.0109
+        }
+      }
+    },
+    "S2": {
+      "n": 69,
+      "hyp": {
+        "H1": {
+          "Spearman \u03c1": 0.4214,
+          "p (Holm)": 0.0002,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H2": {
+          "Spearman \u03c1": 0.4515,
+          "p (Holm)": 0.0001,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H3": {
+          "Spearman \u03c1": 0.7333,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H4": {
+          "Spearman \u03c1": 0.6324,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        }
+      },
+      "ols_r2": 0.4793,
+      "ols": {
+        "TRN": {
+          "\u03b2 (std.)": 0.1113,
+          "p": 0.4444
+        },
+        "CON": {
+          "\u03b2 (std.)": -0.0199,
+          "p": 0.911
+        },
+        "GOV": {
+          "\u03b2 (std.)": 0.492,
+          "p": 0.0148
+        },
+        "COM": {
+          "\u03b2 (std.)": 0.183,
+          "p": 0.2714
+        }
+      }
+    },
+    "S3": {
+      "n": 70,
+      "hyp": {
+        "H1": {
+          "Spearman \u03c1": 0.4413,
+          "p (Holm)": 0.0001,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H2": {
+          "Spearman \u03c1": 0.4732,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H3": {
+          "Spearman \u03c1": 0.7416,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        },
+        "H4": {
+          "Spearman \u03c1": 0.6424,
+          "p (Holm)": 0.0,
+          "Decision": "Supported (association with TBCI proxy)"
+        }
+      },
+      "ols_r2": 0.4952,
+      "ols": {
+        "TRN": {
+          "\u03b2 (std.)": 0.1087,
+          "p": 0.4595
+        },
+        "CON": {
+          "\u03b2 (std.)": -0.0222,
+          "p": 0.901
+        },
+        "GOV": {
+          "\u03b2 (std.)": 0.504,
+          "p": 0.0151
+        },
+        "COM": {
+          "\u03b2 (std.)": 0.181,
+          "p": 0.2837
+        }
+      }
+    }
+  }
+}

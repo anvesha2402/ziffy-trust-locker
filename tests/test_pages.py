@@ -5,7 +5,7 @@ import pytest
 from streamlit.testing.v1 import AppTest
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = sorted((ROOT / "app_pages").glob("*.py"))
+PAGES = sorted(p for p in (ROOT / "app_pages").glob("*.py") if not p.name.startswith("_"))
 
 
 @pytest.mark.parametrize("page", PAGES, ids=[p.stem for p in PAGES])

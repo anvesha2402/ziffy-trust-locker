@@ -93,7 +93,7 @@ GRIEVANCE_CATEGORIES = [
     "Consent was taken without explanation",
     "Other",
 ]
-SLA_DAYS = {"ack": 2, "resolve": 30}  # internal SLA — well inside DPDP's 90-day outer limit
+SLA_DAYS = {"ack": 2, "resolve": 30}  # internal SLA; Rule 14(3) caps the grievance response period at 90 days
 
 
 def _now() -> datetime:
@@ -161,9 +161,18 @@ class Locker:
         self.db.commit()
         return h
 
-    def verify_chain(self) -> tuple[bool, int | None]:
-        """Recompute every hash. Returns (ok, first_bad_seq)."""
+    def verify_chain(self, anchor: dict | None = None) -> tuple[bool, int | None]:
+        """Recompute every hash. Returns (ok, first_bad_seq).
+
+        Without an anchor this detects edits to stored entries. It does NOT detect deletion of the
+        most recent entries, or an insider who rewrites the whole chain from some point onwards,
+        because the chain is self-consistent after such changes. Passing an `anchor` (head hash and
+        entry count recorded earlier and kept OUTSIDE this database) also detects truncation and
+        recomputation. Neither mode proves that every real access was logged in the first place.
+        """
         prev = GENESIS
+        count = 0
+        hashes = {}
         for r in self.db.execute("SELECT * FROM ledger ORDER BY seq"):
             entry = {k: r[k] for k in ("ts", "actor_role", "actor", "action", "resource",
                                         "purpose", "outcome", "detail")}
@@ -172,11 +181,45 @@ class Locker:
             if r["prev_hash"] != prev or r["hash"] != h:
                 return False, r["seq"]
             prev = r["hash"]
+            count += 1
+            hashes[count] = r["hash"]
+        if anchor is not None:
+            n = anchor["count"]
+            if count < n:
+                return False, count + 1           # entries removed after the anchor was taken
+            if hashes.get(n) != anchor["head_hash"]:
+                return False, n                   # history up to the anchor was rewritten
         return True, None
+
+    def anchor(self) -> dict:
+        """Snapshot of the chain head, to be stored outside the database (e.g. write-once storage)."""
+        row = self.db.execute("SELECT COUNT(*) c FROM ledger").fetchone()
+        return {"count": row["c"], "head_hash": self._last_hash(), "ts": _now().isoformat(timespec="seconds")}
 
     def tamper(self, seq: int, new_detail: str = "edited by insider") -> None:
         """Demo only: silently edit a past ledger row as a malicious insider would."""
         self.db.execute("UPDATE ledger SET detail=? WHERE seq=?", (new_detail, seq))
+        self.db.commit()
+
+    def truncate_last(self) -> None:
+        """Demo only: delete the most recent ledger entry (undetectable without an external anchor)."""
+        self.db.execute("DELETE FROM ledger WHERE seq=(SELECT MAX(seq) FROM ledger)")
+        self.db.commit()
+
+    def rewrite_from(self, seq: int, new_detail: str = "rewritten by insider") -> None:
+        """Demo only: edit an entry AND recompute every later hash, so the chain looks valid internally."""
+        rows = [dict(r) for r in self.db.execute("SELECT * FROM ledger ORDER BY seq")]
+        prev = GENESIS
+        for r in rows:
+            if r["seq"] == seq:
+                r["detail"] = new_detail
+            entry = {k: r[k] for k in ("ts", "actor_role", "actor", "action", "resource",
+                                        "purpose", "outcome", "detail")}
+            entry["prev_hash"] = prev
+            h = hashlib.sha256(_canon(entry).encode()).hexdigest()
+            self.db.execute("UPDATE ledger SET detail=?, prev_hash=?, hash=? WHERE seq=?",
+                            (r["detail"], prev, h, r["seq"]))
+            prev = h
         self.db.commit()
 
     def ledger(self) -> list[dict]:

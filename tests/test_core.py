@@ -98,3 +98,40 @@ def test_roi_monotonic_in_uplift():
 def test_dpdp_locker_improves_score():
     lv = {c[0]: 1 for c in dpdp.CONTROLS}
     assert dpdp.overall(dpdp.score(lv, True)) > dpdp.overall(dpdp.score(lv))
+
+
+# ---------------------------------------------------------------- ledger anchoring
+def test_ledger_edit_detected_without_anchor():
+    from core.locker import Locker
+    L = Locker()
+    for i in range(5):
+        L.log("system", "test", f"r{i}", "treatment")
+    assert L.verify_chain() == (True, None)
+    L.tamper(3)
+    ok, bad = L.verify_chain()
+    assert not ok and bad == 3
+
+
+def test_ledger_truncation_and_rehash_need_anchor():
+    from core.locker import Locker
+    for attack in ("truncate", "rehash"):
+        L = Locker()
+        for i in range(6):
+            L.log("system", "test", f"r{i}", "treatment")
+        anc = L.anchor()
+        if attack == "truncate":
+            L.truncate_last()
+        else:
+            L.rewrite_from(2)
+        assert L.verify_chain() == (True, None)          # undetectable from inside the database
+        ok, _ = L.verify_chain(anchor=anc)
+        assert not ok                                    # detected against the external anchor
+
+
+def test_ledger_growth_after_anchor_is_fine():
+    from core.locker import Locker
+    L = Locker()
+    L.log("system", "test", "a", "treatment")
+    anc = L.anchor()
+    L.log("system", "test", "b", "treatment")
+    assert L.verify_chain(anchor=anc) == (True, None)

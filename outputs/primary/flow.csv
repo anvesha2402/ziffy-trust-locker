@@ -1,0 +1,8 @@
+Stage,Count,Treatment
+Responses in file,112,
+Missing item responses,0,cells
+"Non-users (""No"")",37,excluded from analytic sample
+Usage question blank,1,excluded: eligibility unknown
+Primary analytic sample A (users),74,
+  of which straight-liners,5,retained; tested in S2
+  of which exact duplicate item patterns,4,retained; tested in S3

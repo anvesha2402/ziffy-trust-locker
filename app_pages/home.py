@@ -49,9 +49,9 @@ with l3:
 
 st.subheader("What is in this toolkit")
 tools = [
-    ("📊 Research Lab", "Upload a Google-Forms export → data-quality audit, cleaning flow, reliability, "
-     "correlations, regression with VIF, bootstrap mediation, hypothesis table."),
-    ("🎯 Kano Analyzer", "Classify Locker features as Must-be / Performance / Attractive to decide the pilot MVP."),
+    ("📊 Research Lab", "The project's genuine survey (n = 112): sample flow, item results, two-item reliability, "
+     "factor structure, HTMT, pre-specified hypothesis tests, robustness checks. Plus a separate synthetic method demo."),
+    ("🎯 Kano Analyzer", "Kano classification tool, shown on simulated responses. Ready for a real Kano survey; current output is illustrative only."),
     ("🔐 Locker Prototype", "Working patient journey: consent wizard (EN/हिंदी), live policy engine, access log, "
      "Care Moments, grievances, DPO console with ledger verification and a tamper demo."),
     ("🛡️ Security Architecture", "Data-flow, STRIDE threat model, control set, breach clock, PHI-safe notification checker."),
@@ -65,13 +65,20 @@ for i, (t, d) in enumerate(tools):
         ui.card(t, d)
         st.write("")
 
-with st.expander("Honest notes on evidence"):
+with st.expander("Evidence status: what is measured, what is assumed", expanded=True):
     st.markdown(
-        "- The original project survey could not be re-analysed: the file available failed basic data-quality "
-        "tests (item correlations indistinguishable from random answering; minors and non-users included). "
-        "No inferential claims from it are used here.\n"
-        "- The Research Lab ships with a **synthetic** dataset built on a corrected questionnaire (v2) so the full "
-        "pipeline can be demonstrated. Results from it describe the simulation, not Indian patients.\n"
-        "- Business-case inputs are editable planning assumptions, not ZiffyHealth figures.\n"
-        "- Compliance content is educational; a qualified DPO/counsel must confirm applicability.")
+        "- **Primary survey (genuine):** 112 responses to the project's Google Form; 74 platform users form the analytic "
+        "sample. Favourable views of transparency, consent, governance and communication are each associated with "
+        "trust-based intention to keep using a platform (Spearman ρ 0.46–0.75). Governance & accountability is the only "
+        "robust unique association. Associations only: no causal claim, no rural or kiosk users sampled, no separate "
+        "trust measure, so trust → usage and mediation are untested.\n"
+        "- **Gaps users report:** only 38% agree their platform protects their data or would take responsibility for misuse; "
+        "47% agree it is transparent about who can access their data.\n"
+        "- **Synthetic demo** (Research Lab option, Kano page): simulated data that illustrates methods only, not findings.\n"
+        "- **Business case:** every input is a planning assumption; no ZiffyHealth operating data was available.\n"
+        "- **Compliance pages:** educational mapping, not legal advice or certification.\n"
+        "- **Prototype:** simulated patient, partners and events; consent checks and the audit ledger run in-app, "
+        "not against production systems.\n"
+        "- A 222-response file from a different project's survey was once associated with this project in error; "
+        "it is excluded entirely (see `docs/CORRECTION_LOG.md`).")
 ui.footer()

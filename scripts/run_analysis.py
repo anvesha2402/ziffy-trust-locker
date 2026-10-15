@@ -1,6 +1,9 @@
-"""Reproduce every number quoted in the README / case study.
+"""Run the generic Research Lab pipeline on a survey export (default: the SYNTHETIC demo file).
 
     python scripts/run_analysis.py [path/to/export.csv|xlsx]   > results.md
+
+The default output (docs/RESULTS_SYNTHETIC.md) is a method illustration on simulated data, not findings.
+The project's genuine results come from scripts/primary_analysis.py (docs/primary/RESULTS_PRIMARY.md).
 """
 import sys
 from pathlib import Path
@@ -15,7 +18,11 @@ src = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().paren
 raw = pd.read_excel(src) if src.suffix == ".xlsx" else pd.read_csv(src)
 A = pipeline.run(raw, n_boot=5000)
 
-print(f"# Results — {src.name}\n")
+print(f"# Pipeline output — {src.name}\n")
+if "SYNTHETIC" in src.name:
+    print("> **Method illustration on simulated data, not findings.** Every number below describes a simulation "
+          "with a known generating model (`core/sample_data.py`). None of it may be cited as evidence about "
+          "patients, ZiffyHealth or the market. Genuine survey results: `docs/primary/RESULTS_PRIMARY.md`.\n")
 print("## Cleaning flow\n"); print(A.flow.to_markdown(index=False))
 print("\n## Quality audit\n"); print(f"**{A.verdict}**\n")
 for c in A.checks:
@@ -45,5 +52,5 @@ p = roi.summary(replace(a, scale_clinics_after_12m=0))
 mc = roi.monte_carlo(a, 2000)
 print("\n## Business case (default assumptions)\n")
 print(f"- Pilot+scale: NPV ₹{s['npv']/1e5:.1f} L, payback month {s['payback']}, gain/cost {s['roi']:.2f}×, "
-      f"break-even uplift {roi.breakeven_uplift(a)*100:.1f} pp, P(NPV>0)={(mc>0).mean():.0%}")
+      f"break-even uplift {roi.breakeven_uplift(a)*100:.1f} pp, share of simulated runs with NPV > 0 = {(mc>0).mean():.0%} (assumed ranges)")
 print(f"- Pilot only: NPV ₹{p['npv']/1e5:.1f} L, payback {p['payback']}, gain/cost {p['roi']:.2f}×")

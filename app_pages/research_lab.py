@@ -12,15 +12,28 @@ from core import stats as S
 DATA = Path(__file__).resolve().parents[1] / "data"
 
 ui.setup("Research Lab", "Evidence · survey analytics",
-         "Does transparency, consent, governance and communication build digital trust — and does trust "
-         "drive continued use? This page runs the full pipeline, quality audit first.")
+         "Are favourable views of a platform's transparency, consent, governance and communication associated "
+         "with trust-based intention to keep using it? The default view analyses the project's genuine survey.")
 
-src = st.radio("Data source", ["Synthetic demo (questionnaire v2)", "Upload my Google-Forms export"],
-               horizontal=True)
+src = st.radio("Data source", ["Primary survey (genuine, n = 112)", "Synthetic method demo (not findings)",
+                               "Upload my Google-Forms export"], horizontal=True)
+if src.startswith("Primary"):
+    from core import primary as _P
+    if not _P.DEID_PATH.exists():
+        st.warning("The de-identified survey file is not included in this deployment. The published aggregate "
+                   "results are in `docs/primary/RESULTS_PRIMARY.md` and `outputs/primary/`.")
+        ui.footer()
+        st.stop()
+    from app_pages._research_primary import render as _render_primary
+    _render_primary()
+    ui.footer()
+    st.stop()
 raw = None
 if src.startswith("Synthetic"):
     raw = pd.read_csv(DATA / "synthetic_survey_v2_SYNTHETIC.csv")
     ui.synthetic_banner()
+    st.warning("This simulated dataset only demonstrates the generic pipeline (audit → reliability → regression → "
+               "mediation) on a hypothetical extended questionnaire. None of its results are findings about real people.")
 else:
     up = st.file_uploader("CSV or XLSX exported from Google Forms", type=["csv", "xlsx"])
     if up is not None:
@@ -34,10 +47,11 @@ auto = {k: v for k, v in auto.items() if v}
 
 with st.expander(f"Construct mapping — {sum(map(len, auto.values()))} items in {len(auto)} constructs (edit if needed)"):
     candidates = [c for c in raw.columns]
+    sig = abs(hash(tuple(map(str, raw.columns)))) % 10**8  # reset selections when a different file is loaded
     mapping = {}
     for code in list(S.CONSTRUCTS):
         default = auto.get(code, [])
-        sel = st.multiselect(f"{code} · {S.CONSTRUCTS[code]}", candidates, default=default, key=f"map_{code}",
+        sel = st.multiselect(f"{code} · {S.CONSTRUCTS[code]}", candidates, default=default, key=f"map_{code}_{sig}",
                              format_func=lambda c: (c[:110] + "…") if len(str(c)) > 110 else c)
         if sel:
             mapping[code] = sel
@@ -87,8 +101,8 @@ with tabs[1]:
 
 with tabs[2]:
     st.markdown("#### Internal consistency, per construct")
-    st.caption("The original deck reported a single α for a combined Trust + Usage scale. Reliability must be "
-               "shown per construct — mixing an independent and a dependent variable in one α is not valid.")
+    st.caption("The original deck reported one α (0.755) for Q14 and Q15 combined, an outcome item and a "
+               "trust-importance item. Reliability should be shown per construct, never across a predictor and an outcome.")
     rel = A.reliability
     fig = px.bar(rel, x="Cronbach α", y="Construct", orientation="h", text="Cronbach α",
                  color=np.where(rel["Cronbach α"] >= .7, "≥ 0.70", "< 0.70"),
@@ -139,6 +153,10 @@ with tabs[5]:
                      "Indirect a×b": md.indirect, "95% CI low": md.ci_low, "95% CI high": md.ci_high,
                      "Type": md.kind})
     mdf = pd.DataFrame(rows)
+    if mdf.empty:
+        st.info("Mediation needs at least one driver construct (Transparency, Consent, Governance or Communication) "
+                "mapped with valid items, plus Trust and Usage. Map them in the construct panel above.")
+        st.stop()
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=mdf["Indirect a×b"], y=mdf["Driver (X)"], mode="markers",
                              marker=dict(size=12, color=ui.PRIMARY),

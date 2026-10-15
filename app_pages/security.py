@@ -9,6 +9,17 @@ ui.setup("Security Architecture", "Solution · data protection by design",
          "The original deck covered only the UX layer of compliance. This page adds the engineering layer: "
          "where health data flows, what can go wrong (STRIDE), which controls stop it, and what happens "
          "in the first 72 hours of a breach.")
+st.subheader("0 · Scope: what exists, what is simulated, what is proposed")
+ui.table(pd.DataFrame([
+    ("Consent & policy engine (purpose, data type, expiry)", "Implemented in prototype", "Runs in-app on simulated partners"),
+    ("Hash-chained audit ledger + verify + external anchor", "Implemented in prototype", "SQLite in memory; anchor kept in session, not WORM storage"),
+    ("PHI keyword checker for notifications", "Implemented in prototype", "Keyword list; misses paraphrases, not a classifier"),
+    ("Grievance case IDs and SLA tracking", "Implemented in prototype", "No real notifications or staff workflow"),
+    ("WhatsApp/SMS delivery, OTP, kiosk hardening", "Simulated", "Messages shown on screen only"),
+    ("API gateway, mTLS, WAF, KMS encryption, WORM backup, SOC", "Proposed", "Architecture design only; not built or tested"),
+    ("ABDM / ABHA integration, FHIR exchange", "Proposed", "Not integrated with the sandbox"),
+    ("Penetration test, ISO 27001/27701", "Not done", "Required before any production use"),
+], columns=["Component", "Status", "Note"]))
 
 st.subheader("1 · Data-flow and trust boundaries")
 st.graphviz_chart("""
@@ -86,7 +97,7 @@ ui.table(pd.DataFrame([
     ("Kiosk: auto-logout, no local PHI, privacy filter, tamper-evident enclosure", "Rule 6 reasonable safeguards", "Operations"),
     ("Processor contracts with labs/pharmacies; annual vendor audit", "DPDP s.8(2)", "Legal"),
     ("Breach runbook with 6 h / 72 h clocks and plain-language patient notice", "CERT-In; Rule 7", "SOC + DPO"),
-    ("Grievance officer, case IDs, SLA ≤ 30 days (limit 90)", "DPDP s.8(10), s.13", "Locker L3"),
+    ("Grievance officer, case IDs, internal SLA ≤ 30 days (Rule 14(3) outer limit 90 days for grievances)", "DPDP s.8(10), s.13; Rule 14(3)", "Locker L3"),
     ("ISO 27001 + ISO 27701 certification roadmap", "Good practice / B2B trust signal", "Leadership"),
 ], columns=["Control", "Obligation / rationale", "Owner"]))
 ui.footer()

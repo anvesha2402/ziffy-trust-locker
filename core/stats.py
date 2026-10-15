@@ -285,7 +285,8 @@ def hypothesis_table(driver_model: RegResult, usage_model: RegResult, alpha: flo
     return pd.DataFrame(rows)
 
 
-# Keyword map for Google-Form headers ("Section [statement]"), v1 and v2 instruments
+# Keyword map for Google-Form headers ("Section [statement]") of the synthetic demo instrument.
+# The genuine Team Anova form (Q6–Q15) is handled by core/primary.py, not by this mapper.
 FORM_KEYWORDS = [
     ("TRU", ["i trust digital and telehealth", "confident relying on digital", "act in my best interest"]),
     ("PRV", ["kept private", "protected from misuse", "advanced encryption"]),

@@ -9,6 +9,21 @@ from core import roi, ui
 ui.setup("ROI Simulator", "Decision tool · business case",
          "Two value levers — fewer “where is my report?” calls and more repeat visits — against build, "
          "compliance and running costs. Every input is an editable assumption, not ZiffyHealth data.")
+st.warning("**No verified operating data.** ZiffyHealth did not share clinic volumes, call costs, repeat rates or "
+           "build quotes. Every number on this page is a planning assumption or a simulation built on those "
+           "assumptions. The outputs show which assumptions matter most; they are not a forecast.", icon="⚠️")
+with st.expander("Evidence basis of each input", expanded=False):
+    import pandas as _pd
+    ui.table(_pd.DataFrame([
+        ("Pilot clinics, patients per clinic, scale-up clinics", "Assumption", "Team planning figure; replace with Ziffy franchise data"),
+        ("Repeat-visit uplift", "Assumption", "No retention data available; the primary survey measured stated intention (Q14), not behaviour"),
+        ("Revenue per visit, contribution margin", "Assumption", "Order-of-magnitude public tele-consult pricing; not Ziffy accounts"),
+        ("Status calls per patient, call deflection, cost per call", "Assumption", "No call-centre logs available; most sensitive driver"),
+        ("WhatsApp / SMS cost per message", "Assumption", "List-price order of magnitude; verify against the BSP contract"),
+        ("Build, compliance and run costs", "Assumption", "No vendor quotes obtained"),
+        ("NPV, payback, tornado, Monte Carlo, break-even", "Simulation", "Deterministic arithmetic on the assumptions above; ranges are assumed, not estimated"),
+        ("Verified inputs", "None", "Nothing on this page comes from audited or operating data"),
+    ], columns=["Input / output", "Status", "Basis"]))
 
 a0 = roi.Assumptions()
 with st.sidebar:
@@ -69,11 +84,12 @@ with c2:
     hf.add_vline(x=0, line_dash="dash", line_color=ui.BAD)
     hf.update_layout(xaxis_title="NPV (₹ lakh)", yaxis_title="runs")
     st.plotly_chart(ui.plotly_layout(hf, 330))
-    st.metric("Probability NPV > 0", f"{(mc > 0).mean():.0%}")
+    st.metric("Share of simulated runs with NPV > 0", f"{(mc > 0).mean():.0%}",
+              help="Depends entirely on the assumed ranges below; not an estimated probability.")
     st.caption("Uncertain: uplift 0 → 2× base, deflection 0.4 → 1.5× base, build cost 0.8 → 1.8× base, "
                "volume 0.6 → 1.3× base (triangular).")
 
-st.info("**Reading it honestly:** with default assumptions a 10-clinic pilot alone does not repay the build — the "
+st.info("**Reading it honestly (simulation, not forecast):** with default assumptions a 10-clinic pilot alone does not repay the build — the "
         "case depends on scaling to more clinics and on call deflection, the most sensitive driver. That is why the "
         "pilot's job is to *measure deflection and repeat rate* against a control group before scaling.")
 ui.footer()
